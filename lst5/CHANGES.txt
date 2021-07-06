@@ -1,0 +1,103 @@
+The development history of LittleSmalltalk V5.0
+===============================================
+
+
+5.0 alpha 007 - Release date: 01/13/2007
+-------------
+- Lots of new stuff, for example:
+- The nogui version is now ported to a variety of
+  platforms (Linux, Mac OS/X, SUN Solaris, IBM AIX,
+  HP-UX, SGI Irix and of course Windows).
+  These ports are based on work done by Alex! Thanks!
+- The Windows version now comes in two versions in the
+  precompiled package: gui based and without gui.
+  The GUI based image opens per default the
+  image file "LittleSmalltalk.image".
+  The non-GUI version opens per default the
+  image file "LittleSmalltalk_nogui.image".
+- New Startup structure in the standard images.
+  This new structure is realized by a series of classes:
+  Application
+    ShellApplication
+      LittleSmalltalkShellApplication
+    GUIApplication
+      LittleSmalltalkApplication
+
+  An application provides a method #image: that creates
+  a new image that at startup will call the #onStartup method
+  of the application object.
+  Subclasses of ShellApplication don't use the GUI subsystem.
+  Subclasses of GUIApplication are GUI based applications.
+  There are two conrete classes that startup GUI resp. nongui
+  LittleSmalltalk systems: LittleSmalltalkApplication and
+  LittleSmalltalkShellApplication.
+
+  If you want to create your own GUI application, do this:
+  - Create a subclass of GUIApplication, say HelloWorldApplication
+  - Copy the #onStartup method of LittleSmalltalkApplication into
+    your class and change it according to your needs.
+  - Then create an image with a command like this:
+    HelloWorldApplication new image: 'HelloWorld.image'
+
+- Lots of minor and major bug fixes and improvements,
+  some examples:
+  + Symbols like #keyword:Message:Symbol: can now be parsed
+    correctly.
+  + -1 < 0 now returns true ;)
+  + "true print" and "false print" did sometimes crash.
+  + (20 to: -20 by: -2) do: [ :x | x print ] now works.
+  + etc. pp. lots of low level improvements
+- There are still lots of known and unknown problems with
+  this release. But the system is getter better...
+
+
+5.0 alpha 006 - Release date: 01/06/2007
+-------------
+- Allows Import and Export of class definitions to allow
+  usage of classes after changing to a new LST image
+
+
+5.0 alpha 005 - Release date: 01/05/2007
+-------------
+- Major enhancements:
+  - New class browser
+  - New Launcher / Transcript
+  - New Workspace
+  These tools are now written using the widget classes.
+- Several bug fixes
+- Comes with a precompiled version for Windows
+  (Earlier versions were source only...)
+
+
+5.0 alpha 004 - Release date: 01/02/2007
+-------------
+- Updated third party libraries:
+  IUP2.5, CD4.4, SQLite 3.3.8
+- Compiles now fine with Visual C++ 2005 Express Edition
+
+
+5.0 alpha 003 - Release date: 01/02/2007
+-------------
+- Comes with the beginning of FFI functionality
+
+
+5.0 alpha 002 - Release date: 01/01/2007
+-------------
+- Some GUI extensions
+- Some GUI examples
+- Some bug fixes
+
+
+5.0 alpha 001 - Release date: 12/30/2006
+-------------
+The first release after 4.1.
+Changes include:
+- Methods can be larger than in earlier versions (class BigString etc.)
+- Lots of errors corrected
+- Lots of new methods
+- GUI binding using the IUP library from tecgraf.
+- GUI primitives are wrapped by the methods in class GUIPrimitives
+- A simple class browser (class NewBrowser) that directly uses the primitives
+- Some more usable classes (Widget, WLabel, WButton, WidgetManager etc.)
+- Provides SQLite primitives in the VM
+

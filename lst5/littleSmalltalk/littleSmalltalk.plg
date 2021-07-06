@@ -1,0 +1,349 @@
+<html>
+<body>
+<pre>
+<h1>Erstellungsprotokoll</h1>
+<h3>
+--------------------Konfiguration: sqlite3 - Win32 Debug--------------------
+</h3>
+<h3>Befehlszeilen</h3>
+Erstellen der temporären Datei  "C:\DOKUME~1\DANNYR~1\LOKALE~1\Temp\RSP8.tmp" mit Inhalten
+[
+/nologo /ML /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_MBCS" /D "_LIB" /D "NO_TCL" /Fp"Debug/sqlite3.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\alter.c"
+"C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\attach.c"
+"C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\auth.c"
+"C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\btree.c"
+"C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\build.c"
+"C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\date.c"
+"C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\delete.c"
+"C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\expr.c"
+"C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\func.c"
+"C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\hash.c"
+"C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\insert.c"
+"C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\legacy.c"
+"C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\main.c"
+"C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\opcodes.c"
+"C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\os_mac.c"
+"C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\os_unix.c"
+"C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\os_win.c"
+"C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\pager.c"
+"C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\parse.c"
+"C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\pragma.c"
+"C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\printf.c"
+"C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\random.c"
+"C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\select.c"
+"C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\table.c"
+"C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\tclsqlite.c"
+"C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\tokenize.c"
+"C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\trigger.c"
+"C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\update.c"
+"C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\utf.c"
+"C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\util.c"
+"C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\vacuum.c"
+"C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\vdbe.c"
+"C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\vdbeapi.c"
+"C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\vdbeaux.c"
+"C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\vdbemem.c"
+"C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\where.c"
+]
+Creating command line "cl.exe @C:\DOKUME~1\DANNYR~1\LOKALE~1\Temp\RSP8.tmp" 
+Erstellen der temporären Datei  "C:\DOKUME~1\DANNYR~1\LOKALE~1\Temp\RSP9.tmp" mit Inhalten
+[
+/nologo /out:"Debug\sqlite3.lib" 
+.\Debug\alter.obj
+.\Debug\attach.obj
+.\Debug\auth.obj
+.\Debug\btree.obj
+.\Debug\build.obj
+.\Debug\date.obj
+.\Debug\delete.obj
+.\Debug\expr.obj
+.\Debug\func.obj
+.\Debug\hash.obj
+.\Debug\insert.obj
+.\Debug\legacy.obj
+.\Debug\main.obj
+.\Debug\opcodes.obj
+.\Debug\os_mac.obj
+.\Debug\os_unix.obj
+.\Debug\os_win.obj
+.\Debug\pager.obj
+.\Debug\parse.obj
+.\Debug\pragma.obj
+.\Debug\printf.obj
+.\Debug\random.obj
+.\Debug\select.obj
+.\Debug\table.obj
+.\Debug\tclsqlite.obj
+.\Debug\tokenize.obj
+.\Debug\trigger.obj
+.\Debug\update.obj
+.\Debug\utf.obj
+.\Debug\util.obj
+.\Debug\vacuum.obj
+.\Debug\vdbe.obj
+.\Debug\vdbeapi.obj
+.\Debug\vdbeaux.obj
+.\Debug\vdbemem.obj
+.\Debug\where.obj
+]
+Erstellen der Befehlzeile "link.exe -lib @C:\DOKUME~1\DANNYR~1\LOKALE~1\Temp\RSP9.tmp"
+<h3>Ausgabefenster</h3>
+Kompilierung läuft...
+alter.c
+attach.c
+auth.c
+btree.c
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\btree.c(549) : warning C4018: '<' : Konflikt zwischen signed und unsigned
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\btree.c(601) : warning C4244: '+=' : Konvertierung von '__int64 ' in 'unsigned int ', moeglicher Datenverlust
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\btree.c(811) : warning C4018: '==' : Konflikt zwischen signed und unsigned
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\btree.c(1857) : warning C4018: '>' : Konflikt zwischen signed und unsigned
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\btree.c(1857) : warning C4018: '<=' : Konflikt zwischen signed und unsigned
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\btree.c(1873) : warning C4018: '==' : Konflikt zwischen signed und unsigned
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\btree.c(2346) : warning C4244: '=' : Konvertierung von '__int64 ' in 'unsigned int ', moeglicher Datenverlust
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\btree.c(2352) : warning C4018: '>' : Konflikt zwischen signed und unsigned
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\btree.c(2479) : warning C4244: '=' : Konvertierung von '__int64 ' in 'unsigned int ', moeglicher Datenverlust
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\btree.c(2486) : warning C4018: '>' : Konflikt zwischen signed und unsigned
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\btree.c(2768) : warning C4244: 'function' : Konvertierung von '__int64 ' in 'int ', moeglicher Datenverlust
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\btree.c(2768) : warning C4244: 'function' : Konvertierung von '__int64 ' in 'int ', moeglicher Datenverlust
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\btree.c(2770) : warning C4244: 'function' : Konvertierung von '__int64 ' in 'int ', moeglicher Datenverlust
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\btree.c(2772) : warning C4244: 'function' : Konvertierung von '__int64 ' in 'unsigned int ', moeglicher Datenverlust
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\btree.c(2773) : warning C4244: 'function' : Konvertierung von '__int64 ' in 'int ', moeglicher Datenverlust
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\btree.c(2773) : warning C4244: 'function' : Konvertierung von '__int64 ' in 'int ', moeglicher Datenverlust
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\btree.c(3105) : warning C4018: '>' : Konflikt zwischen signed und unsigned
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\btree.c(3142) : warning C4018: '!=' : Konflikt zwischen signed und unsigned
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\btree.c(3147) : warning C4018: '!=' : Konflikt zwischen signed und unsigned
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\btree.c(3157) : warning C4018: '!=' : Konflikt zwischen signed und unsigned
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\btree.c(3247) : warning C4018: '>' : Konflikt zwischen signed und unsigned
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\btree.c(3306) : warning C4018: '==' : Konflikt zwischen signed und unsigned
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\btree.c(3315) : warning C4244: '+=' : Konvertierung von '__int64 ' in 'int ', moeglicher Datenverlust
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\btree.c(3317) : warning C4244: '=' : Konvertierung von '__int64 ' in 'int ', moeglicher Datenverlust
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\btree.c(3534) : warning C4018: '<=' : Konflikt zwischen signed und unsigned
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\btree.c(4326) : warning C4018: '<=' : Konflikt zwischen signed und unsigned
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\btree.c(4731) : warning C4018: '==' : Konflikt zwischen signed und unsigned
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\btree.c(4823) : warning C4018: '>' : Konflikt zwischen signed und unsigned
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\btree.c(4944) : warning C4018: '==' : Konflikt zwischen signed und unsigned
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\btree.c(4987) : warning C4018: '==' : Konflikt zwischen signed und unsigned
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\btree.c(4993) : warning C4018: '!=' : Konflikt zwischen signed und unsigned
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\btree.c(5485) : warning C4244: '+=' : Konvertierung von '__int64 ' in 'int ', moeglicher Datenverlust
+build.c
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\btree.c(2768) : warning C4761: Größenkonflikt im Argument. Konvertierung vorgenommen
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\btree.c(2768) : warning C4761: Größenkonflikt im Argument. Konvertierung vorgenommen
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\btree.c(2770) : warning C4761: Größenkonflikt im Argument. Konvertierung vorgenommen
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\btree.c(2772) : warning C4761: Größenkonflikt im Argument. Konvertierung vorgenommen
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\btree.c(2773) : warning C4761: Größenkonflikt im Argument. Konvertierung vorgenommen
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\btree.c(2773) : warning C4761: Größenkonflikt im Argument. Konvertierung vorgenommen
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\build.c(540) : warning C4018: '==' : Konflikt zwischen signed und unsigned
+date.c
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\build.c(1167) : warning C4761: Größenkonflikt im Argument. Konvertierung vorgenommen
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\date.c(235) : warning C4244: '=' : Konvertierung von 'double ' in 'int ', moeglicher Datenverlust
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\date.c(236) : warning C4244: '=' : Konvertierung von 'double ' in 'int ', moeglicher Datenverlust
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\date.c(341) : warning C4244: '=' : Konvertierung von 'double ' in 'int ', moeglicher Datenverlust
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\date.c(342) : warning C4244: '=' : Konvertierung von 'double ' in 'int ', moeglicher Datenverlust
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\date.c(345) : warning C4244: '=' : Konvertierung von 'double ' in 'int ', moeglicher Datenverlust
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\date.c(346) : warning C4244: '=' : Konvertierung von 'double ' in 'int ', moeglicher Datenverlust
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\date.c(347) : warning C4244: '=' : Konvertierung von 'double ' in 'int ', moeglicher Datenverlust
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\date.c(348) : warning C4244: '=' : Konvertierung von 'double ' in 'int ', moeglicher Datenverlust
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\date.c(362) : warning C4244: '=' : Konvertierung von 'double ' in 'int ', moeglicher Datenverlust
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\date.c(363) : warning C4244: '=' : Konvertierung von 'double ' in 'int ', moeglicher Datenverlust
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\date.c(365) : warning C4244: '=' : Konvertierung von 'double ' in 'int ', moeglicher Datenverlust
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\date.c(409) : warning C4244: 'initializing' : Konvertierung von 'double ' in 'int ', moeglicher Datenverlust
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\date.c(415) : warning C4244: '=' : Konvertierung von 'double ' in 'long ', moeglicher Datenverlust
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\date.c(510) : warning C4244: '=' : Konvertierung von 'double ' in 'int ', moeglicher Datenverlust
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\date.c(516) : warning C4244: '=' : Konvertierung von 'double ' in 'int ', moeglicher Datenverlust
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\date.c(608) : warning C4244: '+=' : Konvertierung von 'double ' in 'int ', moeglicher Datenverlust
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\date.c(614) : warning C4244: '=' : Konvertierung von 'double ' in 'int ', moeglicher Datenverlust
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\date.c(620) : warning C4244: '+=' : Konvertierung von 'double ' in 'int ', moeglicher Datenverlust
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\date.c(814) : warning C4244: 'initializing' : Konvertierung von 'double ' in 'int ', moeglicher Datenverlust
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\date.c(815) : warning C4244: 'initializing' : Konvertierung von 'double ' in 'int ', moeglicher Datenverlust
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\date.c(829) : warning C4244: '=' : Konvertierung von 'double ' in 'int ', moeglicher Datenverlust
+delete.c
+expr.c
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\expr.c(347) : warning C4018: '==' : Konflikt zwischen signed und unsigned
+func.c
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\expr.c(1120) : warning C4761: Größenkonflikt im Argument. Konvertierung vorgenommen
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\expr.c(1122) : warning C4761: Größenkonflikt im Argument. Konvertierung vorgenommen
+hash.c
+insert.c
+legacy.c
+main.c
+opcodes.c
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\main.c(784) : warning C4761: Größenkonflikt im Argument. Konvertierung vorgenommen
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\main.c(795) : warning C4761: Größenkonflikt im Argument. Konvertierung vorgenommen
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\main.c(822) : warning C4761: Größenkonflikt im Argument. Konvertierung vorgenommen
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\main.c(1134) : warning C4761: Größenkonflikt im Argument. Konvertierung vorgenommen
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\main.c(1274) : warning C4761: Größenkonflikt im Argument. Konvertierung vorgenommen
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\main.c(1404) : warning C4761: Größenkonflikt im Argument. Konvertierung vorgenommen
+os_mac.c
+os_unix.c
+os_win.c
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\os_win.c(303) : warning C4244: 'initializing' : Konvertierung von '__int64 ' in 'long ', moeglicher Datenverlust
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\os_win.c(304) : warning C4244: 'initializing' : Konvertierung von '__int64 ' in 'long ', moeglicher Datenverlust
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\os_win.c(339) : warning C4244: 'initializing' : Konvertierung von '__int64 ' in 'long ', moeglicher Datenverlust
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\os_win.c(343) : warning C4244: 'function' : Konvertierung von '__int64 ' in 'long ', moeglicher Datenverlust
+pager.c
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\os_win.c(343) : warning C4761: Größenkonflikt im Argument. Konvertierung vorgenommen
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\pager.c(545) : warning C4018: '<' : Konflikt zwischen signed und unsigned
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\pager.c(988) : warning C4018: '==' : Konflikt zwischen signed und unsigned
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\pager.c(1090) : warning C4244: 'function' : Konvertierung von '__int64 ' in 'int ', moeglicher Datenverlust
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\pager.c(1095) : warning C4244: 'function' : Konvertierung von '__int64 ' in 'int ', moeglicher Datenverlust
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\pager.c(1303) : warning C4244: '=' : Konvertierung von '__int64 ' in 'unsigned int ', moeglicher Datenverlust
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\pager.c(1311) : warning C4018: '==' : Konflikt zwischen signed und unsigned
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\pager.c(1324) : warning C4018: '<' : Konflikt zwischen signed und unsigned
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\pager.c(1445) : warning C4244: '=' : Konvertierung von '__int64 ' in 'unsigned int ', moeglicher Datenverlust
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\pager.c(1462) : warning C4244: '=' : Konvertierung von '__int64 ' in 'unsigned int ', moeglicher Datenverlust
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\pager.c(1759) : warning C4244: '=' : Konvertierung von '__int64 ' in 'int ', moeglicher Datenverlust
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\pager.c(1761) : warning C4244: 'return' : Konvertierung von '__int64 ' in 'int ', moeglicher Datenverlust
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\pager.c(1843) : warning C4018: '<=' : Konflikt zwischen signed und unsigned
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\pager.c(2199) : warning C4018: '<=' : Konflikt zwischen signed und unsigned
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\pager.c(3428) : warning C4018: '<=' : Konflikt zwischen signed und unsigned
+parse.c
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\pager.c(1090) : warning C4761: Größenkonflikt im Argument. Konvertierung vorgenommen
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\pager.c(1095) : warning C4761: Größenkonflikt im Argument. Konvertierung vorgenommen
+pragma.c
+parse.c(3342) : warning C4761: Größenkonflikt im Argument. Konvertierung vorgenommen
+parse.c(3353) : warning C4761: Größenkonflikt im Argument. Konvertierung vorgenommen
+printf.c
+random.c
+select.c
+table.c
+tclsqlite.c
+tokenize.c
+trigger.c
+c:\daten\projekte\p003_littlesmalltalk\littlesmalltalk\sqlite3\tokenize.c(661) : warning C4761: Größenkonflikt im Argument. Konvertierung vorgenommen
+update.c
+utf.c
+util.c
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\util.c(790) : warning C4244: '=' : Konvertierung von 'unsigned __int64 ' in 'unsigned char ', moeglicher Datenverlust
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\util.c(793) : warning C4244: '=' : Konvertierung von 'unsigned __int64 ' in 'unsigned char ', moeglicher Datenverlust
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\util.c(800) : warning C4244: '=' : Konvertierung von 'unsigned __int64 ' in 'unsigned char ', moeglicher Datenverlust
+vacuum.c
+vdbe.c
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\vdbe.c(297) : warning C4244: '=' : Konvertierung von 'double ' in '__int64 ', moeglicher Datenverlust
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\vdbe.c(1277) : warning C4244: '=' : Konvertierung von '__int64 ' in 'int ', moeglicher Datenverlust
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\vdbe.c(1278) : warning C4244: '=' : Konvertierung von '__int64 ' in 'int ', moeglicher Datenverlust
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\vdbe.c(1329) : warning C4244: '=' : Konvertierung von '__int64 ' in 'int ', moeglicher Datenverlust
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\vdbe.c(1642) : warning C4244: '=' : Konvertierung von '__int64 ' in 'int ', moeglicher Datenverlust
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\vdbe.c(1781) : warning C4244: '=' : Konvertierung von '__int64 ' in 'unsigned int ', moeglicher Datenverlust
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\vdbe.c(1797) : warning C4244: '=' : Konvertierung von '__int64 ' in 'unsigned int ', moeglicher Datenverlust
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\vdbe.c(1825) : warning C4018: '<' : Konflikt zwischen signed und unsigned
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\vdbe.c(1859) : warning C4018: '>=' : Konflikt zwischen signed und unsigned
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\vdbe.c(1874) : warning C4018: '<' : Konflikt zwischen signed und unsigned
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\vdbe.c(1890) : warning C4018: '<' : Konflikt zwischen signed und unsigned
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\vdbe.c(1890) : warning C4018: '<' : Konflikt zwischen signed und unsigned
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\vdbe.c(1890) : warning C4018: '<=' : Konflikt zwischen signed und unsigned
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\vdbe.c(1905) : warning C4018: '<' : Konflikt zwischen signed und unsigned
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\vdbe.c(1913) : warning C4018: '!=' : Konflikt zwischen signed und unsigned
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\vdbe.c(1913) : warning C4018: '!=' : Konflikt zwischen signed und unsigned
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\vdbe.c(2315) : warning C4244: '=' : Konvertierung von '__int64 ' in 'int ', moeglicher Datenverlust
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\vdbe.c(2410) : warning C4244: '=' : Konvertierung von '__int64 ' in 'int ', moeglicher Datenverlust
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\vdbe.c(2420) : warning C4244: '=' : Konvertierung von '__int64 ' in 'int ', moeglicher Datenverlust
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\vdbe.c(3249) : warning C4244: '=' : Konvertierung von '__int64 ' in 'unsigned int ', moeglicher Datenverlust
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\vdbe.c(3352) : warning C4244: 'function' : Konvertierung von '__int64 ' in 'int ', moeglicher Datenverlust
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\vdbe.c(3360) : warning C4244: 'function' : Konvertierung von '__int64 ' in 'unsigned int ', moeglicher Datenverlust
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\vdbe.c(3362) : warning C4244: '=' : Konvertierung von '__int64 ' in 'int ', moeglicher Datenverlust
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\vdbe.c(3931) : warning C4244: '=' : Konvertierung von '__int64 ' in 'int ', moeglicher Datenverlust
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\vdbe.c(4083) : warning C4244: '=' : Konvertierung von '__int64 ' in 'int ', moeglicher Datenverlust
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\vdbe.c(4378) : warning C4244: '=' : Konvertierung von '__int64 ' in 'int ', moeglicher Datenverlust
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\vdbe.c(4384) : warning C4244: '=' : Konvertierung von '__int64 ' in 'int ', moeglicher Datenverlust
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\vdbe.c(4555) : warning C4244: '=' : Konvertierung von '__int64 ' in 'int ', moeglicher Datenverlust
+vdbeapi.c
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\vdbe.c(3352) : warning C4761: Größenkonflikt im Argument. Konvertierung vorgenommen
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\vdbe.c(3360) : warning C4761: Größenkonflikt im Argument. Konvertierung vorgenommen
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\vdbeapi.c(56) : warning C4244: 'return' : Konvertierung von '__int64 ' in 'int ', moeglicher Datenverlust
+vdbeaux.c
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\vdbeapi.c(50) : warning C4761: Größenkonflikt im Argument. Konvertierung vorgenommen
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\vdbeapi.c(66) : warning C4761: Größenkonflikt im Argument. Konvertierung vorgenommen
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\vdbeapi.c(101) : warning C4761: Größenkonflikt im Argument. Konvertierung vorgenommen
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\vdbeapi.c(127) : warning C4761: Größenkonflikt im Argument. Konvertierung vorgenommen
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\vdbeapi.c(492) : warning C4761: Größenkonflikt im Argument. Konvertierung vorgenommen
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\vdbeaux.c(512) : warning C4018: '<=' : Konflikt zwischen signed und unsigned
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\vdbeaux.c(797) : warning C4244: '=' : Konvertierung von '__int64 ' in 'int ', moeglicher Datenverlust
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\vdbeaux.c(1668) : warning C4244: '=' : Konvertierung von 'unsigned __int64 ' in 'unsigned char ', moeglicher Datenverlust
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\vdbeaux.c(1785) : warning C4018: '>=' : Konflikt zwischen signed und unsigned
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\vdbeaux.c(1787) : warning C4018: '>=' : Konflikt zwischen signed und unsigned
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\vdbeaux.c(1813) : warning C4018: '<' : Konflikt zwischen signed und unsigned
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\vdbeaux.c(1815) : warning C4018: '<' : Konflikt zwischen signed und unsigned
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\vdbeaux.c(1860) : warning C4244: 'function' : Konvertierung von '__int64 ' in 'int ', moeglicher Datenverlust
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\vdbeaux.c(1899) : warning C4244: 'function' : Konvertierung von '__int64 ' in 'int ', moeglicher Datenverlust
+vdbemem.c
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\vdbeaux.c(1860) : warning C4761: Größenkonflikt im Argument. Konvertierung vorgenommen
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\vdbeaux.c(1899) : warning C4761: Größenkonflikt im Argument. Konvertierung vorgenommen
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\vdbemem.c(480) : warning C4244: '=' : Konvertierung von 'const __int64 ' in 'double ', moeglicher Datenverlust
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\vdbemem.c(485) : warning C4244: '=' : Konvertierung von 'const __int64 ' in 'double ', moeglicher Datenverlust
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\vdbemem.c(652) : warning C4018: '<=' : Konflikt zwischen signed und unsigned
+where.c
+C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\vdbemem.c(44) : warning C4761: Größenkonflikt im Argument. Konvertierung vorgenommen
+Bibliothek wird erstellt...
+<h3>
+--------------------Konfiguration: sqlite_exe - Win32 Debug--------------------
+</h3>
+<h3>Befehlszeilen</h3>
+Erstellen der temporären Datei  "C:\DOKUME~1\DANNYR~1\LOKALE~1\Temp\RSPA.tmp" mit Inhalten
+[
+/nologo /ML /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /Fp"Debug/sqlite_exe.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite_exe\shell.c"
+]
+Creating command line "cl.exe @C:\DOKUME~1\DANNYR~1\LOKALE~1\Temp\RSPA.tmp" 
+Erstellen der temporären Datei  "C:\DOKUME~1\DANNYR~1\LOKALE~1\Temp\RSPB.tmp" mit Inhalten
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:console /incremental:yes /pdb:"Debug/sqlite_exe.pdb" /debug /machine:I386 /out:"Debug/sqlite_exe.exe" /pdbtype:sept 
+.\Debug\shell.obj
+\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\Debug\sqlite3.lib
+]
+Erstellen der Befehlzeile "link.exe @C:\DOKUME~1\DANNYR~1\LOKALE~1\Temp\RSPB.tmp"
+<h3>Ausgabefenster</h3>
+Kompilierung läuft...
+shell.c
+c:\daten\projekte\p003_littlesmalltalk\littlesmalltalk\sqlite_exe\shell.c(1705) : warning C4013: 'access' undefiniert; Annahme: extern mit Rueckgabetyp int
+Linker-Vorgang läuft...
+<h3>
+--------------------Konfiguration: littleSmalltalk - Win32 Debug--------------------
+</h3>
+<h3>Befehlszeilen</h3>
+Erstellen der temporären Datei  "C:\DOKUME~1\DANNYR~1\LOKALE~1\Temp\RSPD.tmp" mit Inhalten
+[
+/nologo /ML /W3 /Gm /GX /ZI /Od /I "../iup/include" /I "../cd/include" /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /Fp"Debug/littleSmalltalk.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\littleSmalltalk\ffi_primitives.c"
+"C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\littleSmalltalk\gui_primitives.c"
+"C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\littleSmalltalk\interp.c"
+"C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\littleSmalltalk\main.c"
+"C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\littleSmalltalk\memory.c"
+"C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\littleSmalltalk\rss_dynload.c"
+"C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\littleSmalltalk\rss_queue.c"
+"C:\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\littleSmalltalk\sqlite_primitives.c"
+]
+Creating command line "cl.exe @C:\DOKUME~1\DANNYR~1\LOKALE~1\Temp\RSPD.tmp" 
+Erstellen der temporären Datei  "C:\DOKUME~1\DANNYR~1\LOKALE~1\Temp\RSPE.tmp" mit Inhalten
+[
+iupcontrols.lib iup.lib iupgl.lib cd.lib cdiup.lib comctl32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:console /incremental:yes /pdb:"Debug/littleSmalltalk.pdb" /debug /machine:I386 /out:"Debug/littleSmalltalk.exe" /pdbtype:sept /libpath:"../iup/lib" /libpath:"../cd/lib" /libpath:"../allegro/lib" 
+.\Debug\ffi_primitives.obj
+.\Debug\gui_primitives.obj
+.\Debug\interp.obj
+.\Debug\main.obj
+.\Debug\memory.obj
+.\Debug\rss_dynload.obj
+.\Debug\rss_queue.obj
+.\Debug\sqlite_primitives.obj
+\daten\Projekte\P003_littleSmalltalk\littleSmalltalk\sqlite3\Debug\sqlite3.lib
+]
+Erstellen der Befehlzeile "link.exe @C:\DOKUME~1\DANNYR~1\LOKALE~1\Temp\RSPE.tmp"
+<h3>Ausgabefenster</h3>
+Kompilierung läuft...
+ffi_primitives.c
+gui_primitives.c
+interp.c
+main.c
+memory.c
+rss_dynload.c
+rss_queue.c
+sqlite_primitives.c
+Linker-Vorgang läuft...
+
+
+
+<h3>Ergebnisse</h3>
+littleSmalltalk.exe - 0 Fehler, 149 Warnung(en)
+</pre>
+</body>
+</html>

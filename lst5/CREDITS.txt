@@ -1,0 +1,26 @@
+Smalltalk has been developed by a team at the Palo Alto
+Research Center (PARC) of Xerox mainly during the 70ies.
+Many thanx to the members of that team and to all other
+people that influenced the development of Smalltalk,
+the mouse, graphical user interfaces etc.
+
+LittleSmalltalk has been created by Timothy A. Budd in
+1987 (I think). Version 1 is described in his famous
+book "A Little Smalltalk", 1987, Tim Budd, Addison-Wesley.
+(Unfortunately this book is out of print, but you can
+download it in PDF format. Find the link on our web site!)
+
+Since version 4.1 the LittleSmalltalk project is maintained
+and continued by Danny Reinhold / Reinhold Software Services.
+
+Alexander Shendi <shendi@saruman.lb.bawue.de> did a great job
+with porting LittleSmalltalk to Linux and Mac OS X.
+
+I am using some third party libraries such as CD, IUP and
+SQLite. Many thanx to their creators, maintainers etc.!
+Especially to D. Richard Hipp (SQLite) and Antonio Scuri (IUP, CD).
+
+
+If you think that you should be mentioned here, let me know!
+
+

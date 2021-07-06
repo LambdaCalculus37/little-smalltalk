@@ -1,0 +1,65 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual C++ Express 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "littleSmalltalk", "littleSmalltalk\littleSmalltalk.vcproj", "{EF2D7B92-017D-4A0C-96FC-9D3E57009BB5}"
+	ProjectSection(ProjectDependencies) = postProject
+		{DF953583-D9F8-430A-9E2E-D0A2629ACD72} = {DF953583-D9F8-430A-9E2E-D0A2629ACD72}
+		{A2F3E33E-58BA-405E-8353-516EC155CBAD} = {A2F3E33E-58BA-405E-8353-516EC155CBAD}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "sqlite3", "sqlite3\sqlite3.vcproj", "{DF953583-D9F8-430A-9E2E-D0A2629ACD72}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "sqlite_exe", "sqlite_exe\sqlite_exe.vcproj", "{A2F3E33E-58BA-405E-8353-516EC155CBAD}"
+	ProjectSection(ProjectDependencies) = postProject
+		{DF953583-D9F8-430A-9E2E-D0A2629ACD72} = {DF953583-D9F8-430A-9E2E-D0A2629ACD72}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "tests", "tests\tests.vcproj", "{B1A2F3C7-8FD7-4253-BE45-A18AA2D68EF3}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LittleSmalltalk_gui", "LittleSmalltalk_gui\LittleSmalltalk_gui.vcproj", "{BA017035-C1F1-4FA6-91F0-A93FE0097C75}"
+	ProjectSection(ProjectDependencies) = postProject
+		{DF953583-D9F8-430A-9E2E-D0A2629ACD72} = {DF953583-D9F8-430A-9E2E-D0A2629ACD72}
+		{A2F3E33E-58BA-405E-8353-516EC155CBAD} = {A2F3E33E-58BA-405E-8353-516EC155CBAD}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LittleSmalltalk_nogui", "LittleSmalltalk_nogui\LittleSmalltalk_nogui.vcproj", "{DA442195-55B6-4048-90FC-7D0BD407C6B8}"
+	ProjectSection(ProjectDependencies) = postProject
+		{A2F3E33E-58BA-405E-8353-516EC155CBAD} = {A2F3E33E-58BA-405E-8353-516EC155CBAD}
+		{DF953583-D9F8-430A-9E2E-D0A2629ACD72} = {DF953583-D9F8-430A-9E2E-D0A2629ACD72}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EF2D7B92-017D-4A0C-96FC-9D3E57009BB5}.Debug|Win32.ActiveCfg = Debug|Win32
+		{EF2D7B92-017D-4A0C-96FC-9D3E57009BB5}.Debug|Win32.Build.0 = Debug|Win32
+		{EF2D7B92-017D-4A0C-96FC-9D3E57009BB5}.Release|Win32.ActiveCfg = Release|Win32
+		{EF2D7B92-017D-4A0C-96FC-9D3E57009BB5}.Release|Win32.Build.0 = Release|Win32
+		{DF953583-D9F8-430A-9E2E-D0A2629ACD72}.Debug|Win32.ActiveCfg = Debug|Win32
+		{DF953583-D9F8-430A-9E2E-D0A2629ACD72}.Debug|Win32.Build.0 = Debug|Win32
+		{DF953583-D9F8-430A-9E2E-D0A2629ACD72}.Release|Win32.ActiveCfg = Release|Win32
+		{DF953583-D9F8-430A-9E2E-D0A2629ACD72}.Release|Win32.Build.0 = Release|Win32
+		{A2F3E33E-58BA-405E-8353-516EC155CBAD}.Debug|Win32.ActiveCfg = Debug|Win32
+		{A2F3E33E-58BA-405E-8353-516EC155CBAD}.Debug|Win32.Build.0 = Debug|Win32
+		{A2F3E33E-58BA-405E-8353-516EC155CBAD}.Release|Win32.ActiveCfg = Release|Win32
+		{A2F3E33E-58BA-405E-8353-516EC155CBAD}.Release|Win32.Build.0 = Release|Win32
+		{B1A2F3C7-8FD7-4253-BE45-A18AA2D68EF3}.Debug|Win32.ActiveCfg = Debug|Win32
+		{B1A2F3C7-8FD7-4253-BE45-A18AA2D68EF3}.Debug|Win32.Build.0 = Debug|Win32
+		{B1A2F3C7-8FD7-4253-BE45-A18AA2D68EF3}.Release|Win32.ActiveCfg = Release|Win32
+		{B1A2F3C7-8FD7-4253-BE45-A18AA2D68EF3}.Release|Win32.Build.0 = Release|Win32
+		{BA017035-C1F1-4FA6-91F0-A93FE0097C75}.Debug|Win32.ActiveCfg = Debug|Win32
+		{BA017035-C1F1-4FA6-91F0-A93FE0097C75}.Debug|Win32.Build.0 = Debug|Win32
+		{BA017035-C1F1-4FA6-91F0-A93FE0097C75}.Release|Win32.ActiveCfg = Release|Win32
+		{BA017035-C1F1-4FA6-91F0-A93FE0097C75}.Release|Win32.Build.0 = Release|Win32
+		{DA442195-55B6-4048-90FC-7D0BD407C6B8}.Debug|Win32.ActiveCfg = Debug|Win32
+		{DA442195-55B6-4048-90FC-7D0BD407C6B8}.Debug|Win32.Build.0 = Debug|Win32
+		{DA442195-55B6-4048-90FC-7D0BD407C6B8}.Release|Win32.ActiveCfg = Release|Win32
+		{DA442195-55B6-4048-90FC-7D0BD407C6B8}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
