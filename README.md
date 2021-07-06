@@ -46,4 +46,4 @@ Here are the licenses for each version:
 
 **More Information**
 
-The original Little Smalltalk homepage (where I culled all of these source archives from) is no longer up, but luckily it is available for viewing via the [Wayback Machine](https://web.archive.org/web/20071005060831/http://www.littlesmalltalk.org/index.php?page=home)
+The original Little Smalltalk homepage (where I culled all of these source archives from) is no longer up, but luckily it is available for viewing via the [Wayback Machine](https://web.archive.org/web/20071005060831/http://www.littlesmalltalk.org/index.php?page=home).
