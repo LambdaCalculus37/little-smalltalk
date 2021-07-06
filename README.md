@@ -47,3 +47,5 @@ Here are the licenses for each version:
 **More Information**
 
 The original Little Smalltalk homepage (where I culled all of these source archives from) is no longer up, but luckily it is available for viewing via the [Wayback Machine](https://web.archive.org/web/20071005060831/http://www.littlesmalltalk.org/index.php?page=home).
+
+As Little Smalltalk got around quite well and was very cross-platform, this wiki page has more information about LST releases on other platforms, like OS/2 and Amiga; [check it out](http://www.edm2.com/index.php/Little_Smalltalk)!
