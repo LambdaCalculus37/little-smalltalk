@@ -1,0 +1,18 @@
+	This Amiga port of Little Smalltalk is for Aztec C v3.20.
+Compile with 16-bit integers (primitive.c requires cc flag -y200).
+Name your final disk Smalltalk: and include st, :parser/parse,
+and all files in :prelude.
+
+	This package was intended for Unix, so it's surprising how few
+changes were necessary:
+1) Simulated enums with #defines.
+2) Added rand().
+3) Replaced redirection in parse's command line with a third argument.
+4) system().  I've used AmigaDOS's Execute() even though it doesn't
+provide a useful return code, since it does support calls to both CLI and C
+programs, plus redirection.
+
+						Bill Kinnersley
+						CS Dept
+						Washington State University
+						Pullman, WA 99164

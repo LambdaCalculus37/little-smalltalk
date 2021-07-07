@@ -1,0 +1,528 @@
+
+
+
+
+
+
+_C_l_a_s_s _D_e_s_c_r_i_p_t_i_o_n
+
+     ellipsewid = 1.3i arrow A: ellipse "class heading"  arc
+     -> cw arc ellipse "instance variables" arc -> arc cw B:
+     ellipse "protocol" arrow arrow from A.e to B.w
+
+_C_l_a_s_s _H_e_a_d_i_n_g
+
+     arrow circle "CCCCllllaaaassssssss"  arrow  ellipse  "variable"  arrow
+     right  3i  move  left  3i move right 0.1i arc -> cw arc
+     ellipse "colon variable" arc -> arc cw
+
+     vvvvaaaarrrriiiiaaaabbbblllleeee defines the class name,  must  begin  with  an
+     upper case letter.
+     ccccoooolllloooonnnn vvvvaaaarrrriiiiaaaabbbblllleeee defines the superclass name,  superclass
+     is OOOObbbbjjjjeeeecccctttt if not given.
+
+_I_n_s_t_a_n_c_e _V_a_r_i_a_b_l_e_s
+
+     arrow circle "|" arrow A: ellipse "variable" arc ->  cw
+     arc  cw arrow left 1.3i arc cw arc cw move to A.e arrow
+     circle "|" arrow
+
+     Instance variables must begin with a lower case letter.
+
+_P_r_o_t_o_c_o_l
+
+     arrow circle "[" arrow A: ellipse "method"  arc  ->  cw
+     line  down 0.2i arc cw arrow left 0.4i circle "|" arrow
+     left 0.4i arc cw line up 0.2i arc cw move to A.e  arrow
+     circle "]" arrow
+
+     Vertical bar  separating  methods  mmmmuuuusssstttt  be  placed  in
+     column 1.
+
+_M_e_t_h_o_d
+
+     arrow A: ellipse "method pattern" arc -> cw arc ellipse
+     "temporary  variables" arc -> arc cw C: ellipse "state-
+     ments" arrow arrow from A.e to C.w
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                     September 19, 1986
+
+
+
+
+
+
+
+
+_M_e_t_h_o_d _P_a_t_t_e_r_n
+
+     A: arrow ellipse "unary selector" arrow right  3i  move
+     to  A  arc  -> cw line down 0.1i B: arc ellipse "binary
+     selector" arrow ellipse "argument variable" arc -> line
+     up 0.1i arc -> cw move to start of B line down 0.6i arc
+     ellipse "keyword selector" arrow C:  ellipse  "argument
+     variable"  arc line up 0.6i move to C.e right arc -> cw
+     arc cw arrow left 3.1i arc -> cw arc cw
+
+     Argument variables must begin with a lower case letter,
+     and must be distinct from instance variables.
+
+_T_e_m_p_o_r_a_r_y _V_a_r_i_a_b_l_e_s
+
+     arrow circle "|" arrow A: ellipse "variable" arc ->  cw
+     arc  cw arrow left 1.3i arc cw arc cw move to A.e arrow
+     circle "|" arrow
+
+     temporary variables must begin with lower case letters,
+     and  must  be  distinct from both instance and argument
+     variables.
+
+_S_t_a_t_e_m_e_n_t_s
+
+     arrow A: line right 1.5i move to start of A arc  ->  cw
+     arc  circle  "|^"  arc -> arc cw B: ellipse "expression"
+     arrow right 2.5i move to B.e move right 0.5i arc ->  cw
+     arc circle "." arc -> arc cw move to B.e arc -> cw line
+     down 0.4i arc -> cw circle "." arrow left 2.5i  arc  cw
+     arrow up 0.4i arc cw
+
+_E_x_p_r_e_s_s_i_o_n
+
+     A: arrow right 3.3i move to start of A arc  ->  cw  arc
+     ellipse  "variable"  arrow B: circle "<-" arc -> arc cw
+     C: ellipse "cascaded expression" arrow move to B.e  arc
+     -> cw arc cw arrow left 2.3i arc -> cw arc cw
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                     September 19, 1986
+
+
+
+
+
+
+
+
+_C_a_s_c_a_d_e_d _E_x_p_r_e_s_s_i_o_n
+
+     arrow ellipse "simple expression" arrow right 3.5i move
+     left  0.5i  right  arc  ->  cw  arc cw circle ";" arrow
+     ellipse "continuation" arc -> cw arc cw
+
+_S_i_m_p_l_e _E_x_p_r_e_s_s_i_o_n
+
+     arrow A: ellipse "binary" arrow move to A.e arc  ->  cw
+     line  down 0.2i arc cw ellipse "keyword" arc -> cw line
+     up 0.2i arc cw
+
+_B_i_n_a_r_y
+
+     arrow A: ellipse "unary" arrow move to A.e arc -> cw B:
+     line  down 0.2i arc cw ellipse "binary selector" arc ->
+     cw line up 0.2i arc cw
+
+_U_n_a_r_y
+
+     arrow A: ellipse "primary" B: line right 2i arc  ->  cw
+     arc  cw  ellipse "unary selector" arc -> cw arc cw move
+     to B.e arrow right
+
+_P_r_i_m_i_t_i_v_e
+
+     arrow right 0.2i circle  "<primitive"  wid  0.7i  arrow
+     right  0.2i  ellipse  "unsigned  integer" A: line right
+     1.7i arc -> cw arc cw ellipse "primary" arc ->  cw  arc
+     cw move to A.e arrow right circle ">" arrow right
+
+     Unsigned integer must be a number in the range 0-255.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                     September 19, 1986
+
+
+
+
+
+
+
+
+_P_r_i_m_a_r_y
+
+     A: arrow right 2i ellipse  "variable"  arrow  right  2i
+     move  to  start  of A move right 0.5i arc -> cw B: line
+     down 0.1i arc arrow right 1i  ellipse  "literal"  arrow
+     right 1i arc -> line up 0.1i arc cw move to end of B C:
+     arrow down 0.6i arc  arrow  right  1i  ellipse  "block"
+     arrow  right 1i arc -> line up 0.6i move to end of C Z:
+     arrow down 0.6i arc arrow right 1i ellipse  "primitive"
+     arrow  right  1i  arc  -> line up 0.6i move to end of Z
+     arrow down 0.6i arc circle "(" arrow ellipse  "cascaded
+     expression" arrow circle ")" arc -> line up 0.6i
+
+     If variable begins with an upper case letter  it  is  a
+     class  name, otherwise variable must be instance, argu-
+     ment or temporary variable or pseudo variable name.
+
+_C_o_n_t_i_n_u_a_t_i_o_n
+
+     A: arrow arrow right 1.5i ellipse "unary  selector"  Z:
+     line  right  1.5i arrow right 0.5i move to end of Z arc
+     -> cw arrow down 2i arc -> cw arrow left 4.5i arc -> cw
+     arrow  up  2i  arc  -> cw move to end of A arc -> cw C:
+     arrow down 0.4i arc  ellipse  "binary  selector"  arrow
+     ellipse  "unary" arc -> line up 0.4i arc cw move to end
+     of C arrow down 0.6i arc  ellipse  "keyword"  arrow  D:
+     ellipse  "binary" arc -> line up 0.6i move to D.e right
+     arc -> cw arc cw arrow left 3.1i arc cw arc -> cw
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                     September 19, 1986
+
+
+
+
+
+
+
+
+_B_l_o_c_k
+
+     arrow A: circle "[" arrow right  2.2i  ellipse  "state-
+     ments" arrow circle "]" arrow move to A.e arc -> cw arc
+     ellipse "block arguments" width 1.2i arc -> arc cw
+
+     The last statement cannot be followed by a period.
+
+_B_l_o_c_k _A_r_g_u_m_e_n_t_s
+
+     arrow A: ellipse  "colon  variable"  arrow  circle  "|"
+     arrow  move to A.e arc -> cw arc cw arrow left 1.3i arc
+     cw arc cw
+
+_L_i_t_e_r_a_l
+
+     arrow right 1i A: arrow ellipse  "number"  arrow  right
+     1.5i move to start of A arc -> cw B: line down 0.1i arc
+     ellipse "symbol" arc -> line up 0.1i arc cw move to end
+     of  B  C:  arrow  down 0.6i arc ellipse "string" arc ->
+     line up 0.6i move to end of C D: arrow  down  0.6i  arc
+     ellipse  "character  constant" arc -> line up 0.6i move
+     to end of D H: arrow down 0.6i arc ellipse  "bytearray"
+     arc -> line up 0.6i move to end of H E: arrow down 0.6i
+     arc ellipse "array constant" arc -> line up 0.6i
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                     September 19, 1986
+
+
+
+
+
+
+
+
+_N_u_m_b_e_r
+
+     A: arrow right 3.6i move to start of A arc  ->  cw  arc
+     ellipse  "base"  width 0.8i arc -> arc cw arc -> cw arc
+     ellipse  "sign"  width  0.8i  arc  ->  arc  cw  ellipse
+     "unsigned number" arrow
+
+_B_a_s_e
+
+     arrow ellipse "unsigned integer" arrow circle "r" arrow
+
+_S_i_g_n
+
+     A: arrow arrow right 3i move to end of A B: arc cw  arc
+     circle  "+" arc arc cw move to end of B arrow down 0.6i
+     arc circle "-" arc arrow up 0.6i
+
+_U_n_s_i_g_n_e_d _N_u_m_b_e_r
+
+     arrow A: ellipse "unsigned fraction" arc -> cw arc cir-
+     cle  "e"  arrow  right  0.25i ellipse "sign" width 0.8i
+     arrow right 0.25i ellipse "unsigned integer" arc -> arc
+     cw move to A.e arrow right 4.2i
+
+_U_n_s_i_g_n_e_d _F_r_a_c_t_i_o_n
+
+     arrow A: ellipse "unsigned integer" arc -> cw arc  cir-
+     cle  "." arrow ellipse "unsigned integer" arc -> arc cw
+     move to A.e arrow right 4i
+
+_U_n_s_i_g_n_e_d _I_n_t_e_g_e_r
+
+     arrow A: circle "digit" arrow move to A.e arc -> cw arc
+     cw arrow left 0.5i arc -> cw arc cw
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                     September 19, 1986
+
+
+
+
+
+
+
+
+_S_y_m_b_o_l
+
+     arrow circle "#" arrow A: circle "char" arrow  move  to
+     A.e arc cw arc cw arrow left 0.5i arc cw arc cw
+
+     char is any non-space character  that  is  not  one  of
+     period, parenthesis or square braces.
+
+_S_t_r_i_n_g
+
+     arrow circle "'" arrow A: circle  "char"  arrow  circle
+     "'" arrow move to A.e arc cw arc cw arrow left 0.5i arc
+     cw arc cw
+
+     To include a quote mark in a string, use  two  adjacent
+     quote marks.
+
+_C_h_a_r_a_c_t_e_r _C_o_n_s_t_a_n_t
+
+     arrow circle "$" arrow circle "char" arrow
+
+_B_y_t_e_a_r_r_a_y
+
+     arrow circle "#" arrow  circle  "["  arrow  A:  ellipse
+     "unsigned  integer"  arrow circle "]" arrow move to A.e
+     arc -> cw arc cw line left 1.3i arc -> cw arc cw
+
+     Integer must be in the range 0 through 255.
+
+_A_r_r_a_y _C_o_n_s_t_a_n_t
+
+     arrow circle "#" arrow ellipse "array" arrow
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                     September 19, 1986
+
+
+
+
+
+
+
+
+_A_r_r_a_y
+
+     arrow circle  "("  arrow  A:  arc  ->  cw  arc  ellipse
+     "number"  arc  -> arc cw B: arrow circle ")" arrow move
+     to start of A arrow right 2.5i move  to  end  of  A  C:
+     arrow  down  0.6i  arc ellipse "symbol" arc -> arrow up
+     0.6i move to end of C D: arrow down  0.6i  arc  ellipse
+     "string" arc -> arrow up 0.6i move to end of D E: arrow
+     down 0.6i arc ellipse "character constant" arc -> arrow
+     up  0.6i  move  to end of E arrow down 0.6i arc ellipse
+     "array" arc -> arrow up 0.6i move to start of  B  right
+     arc  ->  cw arrow down 3i arc -> cw arrow left 2.4i arc
+     -> cw arrow up 3i arc -> cw
+
+     The leading sharp sign can be omitted  in  symbols  and
+     arrays inside of an array list.  Binary selectors, key-
+     words, and other strings are treated as Symbols  inside
+     of arrays.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                     September 19, 1986
+
+

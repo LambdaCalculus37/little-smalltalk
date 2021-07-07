@@ -1,0 +1,25 @@
+-o st
+main.o
+array.o
+block.o
+byte.o
+class.o
+cldict.o
+courier.o
+drive.o
+file.o
+interp.o
+lex.o
+lexcmd.o
+line.o
+
+number.o
+object.o
+primitive.o
+process.o
+
+string.o
+symbol.o
+syms.o
+-lm
+-lc

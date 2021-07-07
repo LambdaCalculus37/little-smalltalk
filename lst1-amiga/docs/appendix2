@@ -1,0 +1,198 @@
+
+
+
+     sssstttt((((1111))))                        ((((llllooooccccaaaallll))))                        sssstttt((((1111))))
+
+
+
+     NNNNAAAAMMMMEEEE
+          st - a Little Smalltalk
+
+     SSSSYYYYNNNNOOOOPPPPSSSSIIIISSSS
+          st [options] [files]
+
+     DDDDEEEESSSSCCCCRRRRIIIIPPPPTTTTIIIIOOOONNNN
+          sssstttt is an interpreter for a Smalltalk-like language.  For a
+          complete description of the language accepted by the
+          interpreter see the user manual.  Options accepted by the
+          command are as follows:
+
+          -a   If the -a option is given statistics on the number of
+               memory allocations will be displayed following
+               execution.
+
+          -d_d_i_g_i_t
+               If the _d_i_g_i_t is zero only those results explicitly
+               requested by the user will be printed.  If 1, the
+               values of expressions typed at the keyboard will be
+               displayed (this is the default). If 2, the values of
+               expressions and the values assigned in assignment
+               statements will be displayed.
+
+          -f   The -f option indicates fast loading should be used,
+               which loads a binary save image (see ``)s'' below) for
+               the standard library.
+
+          -g   The next argument is taken to be the name of an
+               additional library stored in the system library area.
+               The library is loaded following the standard prelude,
+               just as if a ``)g'' directive were given at the
+               beginning of execution (see below).
+
+          -l   The next argument is taken to be the name of a file
+               containing a binary image saved using the )s directive
+               (see below).  This binary image is loaded prior to
+               execution.
+
+          -m   Do not perform fast loading.  (Used when fastloading is
+               the default).
+
+          -n   The -n option, if given, suppresses the loading of the
+               standard library. As this gives you a system with
+               almost no functionality, it is seldom useful except
+               during debugging.
+
+          -r   The next argument is taken to be the name of a file of
+               Smalltalk commands.  The file is included prior to
+               execution, just as if a ``)r'' directive were given at
+               the beginning of execution (see below).
+
+
+
+
+     Hewlett-Packard               - 1 -             (printed 9/19/86)
+
+
+
+
+
+
+     sssstttt((((1111))))                        ((((llllooooccccaaaallll))))                        sssstttt((((1111))))
+
+
+
+          -s   In normal operation, at the end of execution the number
+               of reference count increments and decrements is printed
+               just prior to exit.  In the absence of cycles these two
+               figures should be equal.  Since cycles can cause large
+               chunks of memory to become unreachable, and seriously
+               degrade performance, this information is often useful
+               in debugging.  The -s option, if given, suppresses the
+               printing of this information.
+
+          The files, if given, must contain class descriptions.
+          Consult the reference manual for the syntax for class
+          descriptions.  The classes defined are included along with
+          the standard library of classes before execution begins.
+
+          Once execution begins, the cursor will tab over 8 spaces to
+          indicate that a command can be entered.  A command consists
+          of a valid Smalltalk expression, without a terminating
+          period.  As each expression is entered it is executed by the
+          Little Smalltalk interpreter, and the results displayed.
+
+          The following system directives can be entered in place of
+          commands:
+
+          )e filename
+               Edit the named file, which must contain only class
+               descriptions.  The Little Smalltalk system will
+               suspend, leaving the user in an editor for making
+               changes to the named file.  Upon exiting the editor,
+               the named file will automatically be included, as with
+               the )i directive (below).  The editor chosen by this
+               command is taken from the variable EDITOR in the user's
+               environment.
+
+          )g filename
+               Search for a file with the given name in the system
+               library area.  If found, load the library in with the
+               users classes.  This is useful for creating libraries
+               of commonly used classes which are not part of the
+               standard prelude, such as classes for statistics
+               applications or for graphics.
+
+          )i filename
+               Include the named file.  The File must contain one or
+               more class descriptions.  The class descriptions are
+               parsed, and if syntactically legal new instances of
+               class CCCCllllaaaassssssss are added to the Smalltalk system.
+
+          )l filename
+               Load a saved binary environment.  The file must have
+               been previously created using the )s directive (below).
+               The values of all variables are overridden.
+
+
+
+
+     Hewlett-Packard               - 2 -             (printed 9/19/86)
+
+
+
+
+
+
+     sssstttt((((1111))))                        ((((llllooooccccaaaallll))))                        sssstttt((((1111))))
+
+
+
+          )r filename
+               Read the named file.  The effect is just as if the
+               lines in the file had been typed at the keyboard.  The
+               file cannot contain class descriptions.
+
+          )s filename
+               Save the current environment in the named file.  The
+               values of all variables will be saved, and can later be
+               restored using the )l directive (above).
+
+          )!string
+               Execute the string following the exclamation point as a
+               Unix command.
+
+     AAAAuuuutttthhhhoooorrrr
+          Tim Budd, Department of Computer Science, The University of
+          Arizona.
+
+     SSSSeeeeeeee AAAAllllssssoooo
+          Timothy A. Budd, _A _L_i_t_t_l_e _S_m_a_l_l_t_a_l_k _U_s_e_r_s _M_a_n_u_a_l.
+
+     BBBBuuuuggggssss
+          Not all the Smalltalk-80 Language described in the Blue Book
+          is supported; see the user manual for details.  (Smalltalk-
+          80 is a trademark of Xerox Corporation).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     Hewlett-Packard               - 3 -             (printed 9/19/86)
+
+
+

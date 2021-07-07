@@ -1,0 +1,4 @@
+JOIN class.p object.p string.p larray.p nil.p array.p boolean.p true.p false.p block.p symbol.p magnitude.p number.p as ram:s1
+JOIN ram:s1 integer.p char.p float.p radian.p point.p random.p collection.p bag.p set.p kcollection.p dictionary.p scollection.p as ram:s2
+JOIN ram:s2 interval.p list.p acollection.p file.p bytearray.p semaphore.p process.p smalltalk.p as ram:s3
+DELETE ram:s1 ram:s2

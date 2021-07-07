@@ -1,0 +1,1349 @@
+
+
+
+
+
+
+
+
+
+                 AAAA LLLLiiiittttttttlllleeee SSSSmmmmaaaallllllllttttaaaallllkkkk UUUUsssseeeerrrr MMMMaaaannnnuuuuaaaallll
+
+
+                        Timothy A. Budd
+
+
+
+
+
+
+  _1.  _I_n_t_r_o_d_u_c_t_i_o_n
+
+       This manual is intended as an aid in using  the  Little
+  Smalltalk  system.   It  is  not  intended  to be used as an
+  introduction to the Smalltalk language.  Little Smalltalk is
+  largely (with exceptions listed in a later section) a subset
+  of  the  Smalltalk-80*  language  described  in  [.Smalltalk
+  blue.].   A  complete description of the classes included in
+  the Little Smalltalk system and the messages they accept  is
+  given in Appendix 1.
+
+  _2.  _R_u_n_n_i_n_g _t_h_e _s_y_s_t_e_m
+
+       The Little Smalltalk system is invoked  by  typing  the
+  command  sssstttt.   The system is interactive - that is, the user
+  types an expression at the keyboard and the system  responds
+  by  evaluating  the  expression  and typing the result.  For
+  example, typing the expression 3333 ++++ 4444 results in the value  7777
+  being  displayed  on the output.  Execution is terminated by
+  typing control-D.  A sample execution session  is  shown  in
+  Figure 1.
+
+
+                        % st
+                        Little Smalltalk
+                                3 + 4
+                        7
+                                ^D
+                        %
+
+
+          FFFFiiiigggguuuurrrreeee 1111:::: A Sample Little Smalltalk Session
+
+
+       Instance variables for the command level can be created
+  by  assigning  a  value  to a new variable name.  Thereafter
+  that variable can be used at the command level, although  it
+  is  not  known within the scope of any method.  The variable
+  _________________________
+  * Smalltalk-80 is a trademark of the Xerox Corporation.
+
+
+
+
+                       September 19, 1986
+
+
+
+
+
+                             - 2 -
+
+
+  ``last'' always contains the  value  returned  by  the  last
+  expression  typed.   Figure  2 shows the creation of a vari-
+  able.  Note that the assignment arrow is  formed  as  a  two
+  character sequence.
+
+
+                    newvar <- 2 / 3
+                    newvar
+               0.666667
+                    2 raisedTo: newvar + (4 / 3)
+               4
+                    last
+               4
+
+
+                  FFFFiiiigggguuuurrrreeee 2222:::: Creating Variables
+
+
+       The default behavior is for the value  of  expressions,
+  with the exception of assignments, to be typed automatically
+  as they are evaluated.  This behavior can be modified either
+  by  using the -d flag (see Appendix 2), or by passing a mes-
+  sage to the pseudo variable ssssmmmmaaaallllllllttttaaaallllkkkk (see Appendix 1).
+
+       Class descriptions must be read  in  from  files,  they
+  cannot  be  entered  interactively.   Class descriptions are
+  entered using a system directive.  For example, to include a
+  class description contained in a file named nnnneeeewwwwccccllllaaaassssssss....sssstttt, the
+  following system directive should be issued:
+
+                         )i newclass.st
+
+  A list of files containing class descriptions  can  also  be
+  given as arguments to the st command.  The command
+
+                      %st file1 ... filen
+  is equivalent to the sequence
+
+                        %st
+                        Little Smalltalk
+                             )i file1
+                             ...
+                             )i filen
+
+       A table of system directives is given in Figure 3.
+
+       Note that the )e system directive invokes an editor  on
+  a file containing class descriptions, and then automatically
+  includes the file when the editor is  exited.  Classes  also
+  respond to the message eeeeddddiiiitttt, which will have the same effect
+  as the )e directive applied to the file containing the class
+  description.    Thus   the  typical  debug/edit/debug  cycle
+
+
+
+                       September 19, 1986
+
+
+
+
+
+                             - 3 -
+
+
+
+
+  _____________________________________________________________
+
+   )e filename
+                 Edit the named file.   The  Little  Smalltalk
+                 system  will  suspend, leaving the user in an
+                 editor for making changes to the named  file.
+                 Upon  leaving  the editor the named file will
+                 automatically  be  included,  as  if  the  )i
+                 directive had been typed.
+
+   )g filename
+                 Search for an entry  in  the  system  library
+                 area  matching  the  filename.  If found, the
+                 class descriptions in the library  entry  are
+                 included.    This   command   is  useful  for
+                 including commonly used classes that are  not
+                 part of the standard prelude, such as classes
+                 for statistics applications or graphics.
+
+   )i filename
+                 Include  the  named  file.   The  file   must
+                 contain  one or more class descriptions.  The
+                 class  descriptions  are   parsed,   and   if
+                 syntactically  legal  new  instances of class
+                 CCCCllllaaaassssssss are added to the Smalltalk system.
+
+   )l filename
+                 Load a previously saved environment from  the
+                 named   file.   The  current  values  of  all
+                 variables are overridden.  The file must have
+                 been created using the )s directive (below).
+
+   )r filename
+                 Read the named file.  The file  must  contain
+                 Smalltalk  statements,  as  would be typed at
+                 the keyboard.  The effect is just as  if  the
+                 lines  of  the  file  had  been  typed at the
+                 keyboard.   The  file  cannot  contain  class
+                 descriptions.
+
+   )s filename
+                 Save the current state  in  the  named  file.
+                 The  values  of  all variables are saved, and
+                 can later be reloaded using the )l  directive
+                 (above).
+
+   )!string
+                 Execute the remainder of the  line  following
+                 the  exclamation  point  as  a Unix* command.
+                 Nothing  is  done  with  the  output  of  the
+                 command,  nor  is the returning status of the
+                 command recorded.
+
+  _____________________________________________________________
+  ||||||||||||||||||||||||||||||||||||||||||||||
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                               ||||||||||||||||||||||||||||||||||||||||||||||
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                  FFFFiiiigggguuuurrrreeee 3333:::: System Directives
+
+
+
+
+
+
+                       September 19, 1986
+
+
+
+
+
+                             - 4 -
+
+
+  involves repeated uses of the )e directive or the eeeeddddiiiitttt  mes-
+  sage  until  a  desired  outcome  is  achieved.   The editor
+  invoked by the )e directive can be changed  by  setting  the
+  EDITOR variable in the users environment.
+
+  _3.  _D_i_f_f_e_r_e_n_c_e_s _b_e_t_w_e_e_n _L_i_t_t_l_e _S_m_a_l_l_t_a_l_k _a_n_d _t_h_e  _S_m_a_l_l_t_a_l_k-
+  _8_0 _s_y_s_t_e_m
+
+       This section  describes  the  differences  between  the
+  language  accepted  by  the  Little Smalltalk system and the
+  language described in  [.Smalltalk  blue.].   The  principal
+  reasons for these changes are as follows:
+
+  size  Classes which are largely unnecessary, or which  could
+        be  easily  simulated  by other classes (e.g. Associa-
+        tion, SortedCollection) have been  eliminated  in  the
+        interest  of  keeping the size of the standard library
+        as small as  possible.   Similarly,  indexed  instance
+        variables  are  not  supported,  since  to do so would
+        increase the size of every object in the  system,  and
+        they can be easily simulated in those classes in which
+        they are important (see below).
+
+  portability
+        Classes which depend upon  particular  hardware  (e.g.
+        BitBlt)  are  not  included  as  part  of  the  Little
+        Smalltalk system.  The basic  system  assumes  nothing
+        more than ascii terminals.
+
+  representation
+        The  need  for  a  textual  representation  for  class
+        descriptions required some small additions to the syn-
+        tax for class methods (see  Appendix  3).   Similarly,
+        the fact that classes and subclasses can be separately
+        parsed, in either order, forced some  changes  in  the
+        scoping rules for instance variables.
+
+       The following sections describe these changes  in  more
+  detail.
+
+  _3._1.  _N_o _B_r_o_w_s_e_r
+
+       The Smalltalk-80 Programming Environment  described  in
+  [.Smalltalk  orange.]  is not included as part of the Little
+  Smalltalk system.  The Little Smalltalk system  is  designed
+  to  be  little, easily portable, and to rely on nothing more
+  than basic terminal capabilities.
+
+  _3._2.  _I_n_t_e_r_n_a_l _R_e_p_r_e_s_e_n_t_a_t_i_o_n _D_i_f_f_e_r_e_n_t
+
+       The  internal  representations  of  objects,  including
+  processes,  interpreters,  and  bytecodes,  is entirely dif-
+  ferent in the Little Smalltalk system from the  Smalltalk-80
+  system described in [.Smalltalk blue.].
+  _________________________
+  * Unix is a trademark of Bell Laboratories.
+
+                       September 19, 1986
+
+
+
+
+
+                             - 5 -
+
+
+  _3._3.  _F_e_w_e_r _C_l_a_s_s_e_s
+
+       Many of the classes described in [.Smalltalk blue.] are
+  not  included  as part of the Little Smalltalk basic system.
+  Some of these are not necessary because of the decision  not
+  to  include  the  editor,  browser, and so on as part of the
+  basic system.  Others are omitted in the interest of keeping
+  the  standard  library of classes small.  A complete list of
+  included classes for the Little Smalltalk system is given in
+  Appendix 1.
+
+  _3._4.  _N_o _C_l_a_s_s _P_r_o_t_o_c_o_l
+
+       Protocol for all classes is defined as  part  of  class
+  CCCCllllaaaassssssss.   It  is  not  possible to redefine class protocol as
+  part of a class description, only  instance  protocol.   The
+  notion of metaclasses is not supported.
+
+  _3._5.  _C_a_s_c_a_d_e_s _D_i_f_f_e_r_e_n_t
+
+       The semantics of cascades has been simplified and  gen-
+  eralized.  The result of a cascaded expression is always the
+  result of the expression to the left of the first semicolon,
+  which is also the receiver for each subsequent continuation.
+  Continuations can include multiple messages.  A rather  non-
+  sensical, but illustrative, example is the following:
+
+                     2 + 3 ; - 7 + 3 ; * 4
+
+
+  The result of this expression is 5 (the value yielded by 2 +
+  3).   5  is  also the receiver for the message - 7, and that
+  result (-2) is in turn the receiver for  the  message  +  3.
+  This  last  result  is thrown away.  5 is then again used as
+  the receiver for the message * 4, the  result  of  which  is
+  also thrown away.
+
+  _3._6.  _I_n_s_t_a_n_c_e _V_a_r_i_a_b_l_e _N_a_m_e _S_c_o_p_e
+
+       In the language described  in  [.Smalltalk  blue.],  an
+  instance variable is known not only to the class protocol in
+  which it is declared, but is also valid in  methods  defined
+  for  any  subclasses of that class.  In the Little Smalltalk
+  system an instance variable can be  referenced  only  within
+  the protocol for the class in which it is declared.
+
+  _3._7.  _I_n_d_e_x_e_d _I_n_s_t_a_n_c_e _V_a_r_i_a_b_l_e_s
+
+       Implicitly defined indexed instance variables  are  not
+  supported.   In  any  class for which these are desired they
+  can be easily simulated by including an additional  instance
+  variable,  containing  an Array, and including the following
+  methods:
+
+
+
+
+                       September 19, 1986
+
+
+
+
+
+                             - 6 -
+
+
+
+           Class Whatever
+           | indexVars |
+           [
+               new: size
+                   indexVars <- Array new: size
+
+           |   at: location
+                   |^ indexVars at: location
+
+           |   at: location put: value
+                   indexVars at: location put: value
+
+               ...
+
+
+
+       The message new: can be used with any  class,  with  an
+  effect  similar  to  new.  That is, if a new instance of the
+  class is created by sending the message new:  to  the  class
+  variable,  the  message  is immediately passed on to the new
+  instance, and the result returned is used as the  result  of
+  the creation message.
+
+  _3._8.  _N_o _P_o_o_l _V_a_r_i_a_b_l_e_s
+
+       The concepts of pool variables,  global  variables,  or
+  class  variables are not supported.  In their place there is
+  a new pseudo-variable, ssssmmmmaaaallllllllttttaaaallllkkkk, which responds to the mes-
+  sages  aaaatttt:::: and aaaatttt::::ppppuuuutttt::::.  The keys for this collection can be
+  arbitrary.  Although this facility is available, its use  is
+  often a sign of poor program design, and should be avoided.
+
+  _3._9.  _N_o _A_s_s_o_c_i_a_t_i_o_n_s
+
+       The class Dictionary stores keys and values separately,
+  rather than as instances of Association.  The class Associa-
+  tion, and all messages referring to Associations  have  been
+  removed.
+
+  _3._1_0.  _G_e_n_e_r_a_t_o_r_s _i_n _p_l_a_c_e _o_f _S_t_r_e_a_m_s
+
+       The notion of stream has been replaced by the  slightly
+  different notion of _g_e_n_e_r_a_t_o_r_s, in particular the use of the
+  messages _f_i_r_s_t and _n_e_x_t in subclasses of CCCCoooolllllllleeeeccccttttiiiioooonnnn.  Exter-
+  nal files are supported by an explicit class FFFFiiiilllleeee.
+
+  _3._1_1.  _P_r_i_m_i_t_i_v_e_s _D_i_f_f_e_r_e_n_t
+
+       Both the syntax and the  use  of  primitives  has  been
+  changed.    Primitives  provide  an  interface  between  the
+  Smalltalk world and the underlying  system,  permitting  the
+  execution   of   operations  that  cannot  be  specified  in
+  Smalltalk.  In Little Smalltalk, primitives cannot fail  and
+
+
+
+                       September 19, 1986
+
+
+
+
+
+                             - 7 -
+
+
+  must return a value (although they may, in error situations,
+  print an error message and  return  nnnniiiillll).   The  syntax  for
+  primitives  has  been altered to permit the specification of
+  primitives with an arbitrary number of arguments.  The  for-
+  mat for a primitive call is as follows:
+
+                <primitive nnnnuuuummmmbbbbeeeerrrr _a_r_g_u_m_e_n_t_l_i_s_t >
+
+  Where nnnnuuuummmmbbbbeeeerrrr is the number of the primitive to  be  executed
+  (which  must be a value between 1 and 255), and _a_r_g_u_m_e_n_t_l_i_s_t
+  is a list of Smalltalk primary expressions (see Appendix 2).
+  Appendix  4  lists  the  meanings  of  each of the currently
+  recognized primitive numbers.
+
+  _3._1_2.  _B_y_t_e _A_r_r_a_y_s
+
+       A new syntax has been created  for  defining  an  array
+  composed  entirely  of unsigned integers in the range 0-255.
+  These arrays are given a very tight encoding.  The syntax is
+  a pound sign, followed by a left square brace, followed by a
+  sequence of numbers in the range 0 to  255,  followed  by  a
+  right square brace.
+
+                          #[ _n_u_m_b_e_r_s ]
+
+
+  Byte Arrays are used extensively internally.
+
+  _3._1_3.  _N_e_w _P_s_e_u_d_o _V_a_r_i_a_b_l_e_s
+
+       In addition to the pseudo  variable  ssssmmmmaaaallllllllttttaaaallllkkkk  already
+  mentioned,  another  pseudo  variable, sssseeeellllffffPPPPrrrroooocccceeeessssssss, has beed
+  added to the Little Smalltalk system.   sssseeeellllffffPPPPrrrroooocccceeeessssssss  returns
+  the currently executing process, which can then be passed as
+  an argument to a semaphore, or be used as a receiver  for  a
+  message  valid  for  class  PPPPrrrroooocccceeeessssssss.   Like  sssseeeellllffff and ssssuuuuppppeeeerrrr,
+  sssseeeellllffffPPPPrrrroooocccceeeessssssss cannot be used at the command level.
+
+  _3._1_4.  _N_o _D_e_p_e_n_d_e_n_c_y
+
+       The notion  of  dependency,  and  automatic  dependency
+  updating, is not included in Little Smalltalk.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                       September 19, 1986
+
+
+
+
+
+
+
+
+                           _A_p_p_e_n_d_i_x _1
+                       _C_l_a_s_s _D_e_s_c_r_i_p_t_i_o_n_s
+
+       The messages accepted by the classes  included  in  the
+  Little  Smalltalk standard library are described in the fol-
+  lowing pages. A list of the classes defined, where  indenta-
+  tion is used to imply subclassing, is given below:
+
+          Object
+             UndefinedObject
+             Symbol
+             Boolean
+                True
+                False
+             Magnitude
+                Char
+                Number
+                   Integer
+                   Float
+                Radian
+                Point
+             Random
+             Collection
+                Bag
+                Set
+                KeyedCollection
+                   Dictionary
+                      Smalltalk
+                   File
+                   SequenceableCollection
+                      Interval
+                      LinkedList
+                         Semaphore
+                      File
+                      ArrayedCollection
+                         Array
+                         ByteArray
+                         String
+             Block
+             Class
+             Process
+
+
+       In the descriptions of each message the following notes
+  may occur:
+
+  _d    Indicates the effect of the  message  differs  slightly
+       from that given in [.Smalltalk blue.].
+
+  _n    Indicates the message is not included as  part  of  the
+       language defined in [.Smalltalk blue.].
+
+  _r    Indicates the protocol for the message overrides a pro-
+       tocol given in some superclass.  Only where the logical
+
+
+
+                       September 19, 1986
+
+
+
+
+
+
+
+
+       effect of this overriding is important is  the  message
+       given  a  second time; some messages, such as copy, are
+       overridden in many classes but are not described in the
+       documentation  because  the  logical effect remains the
+       same.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                       September 19, 1986
+
+
+
+
+
+
+
+
+                           _A_p_p_e_n_d_i_x _2
+                            _M_a_n _P_a_g_e
+
+       A Unix man page for the st command is given on the fol-
+  lowing page.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                       September 19, 1986
+
+
+
+
+
+
+
+
+                           _A_p_p_e_n_d_i_x _3
+                         _S_y_n_t_a_x _C_h_a_r_t_s
+
+       Syntax charts for the language accepted by  the  Little
+  Smalltalk  system are described on the following pages.  The
+  following is an example class description:
+
+  Class Set :Collection
+  | dict |
+  [
+          new
+                  dict <- Dictionary new
+
+  |       add: newElement
+                  dict at: newElement
+                       ifAbsent: [dict at: newElement put: 1]
+
+  |       remove: oldElement ifAbsent: exceptionBlock
+                  dict removeKey: oldElement ifAbsent: exceptionBlock
+
+  |       size
+                  |^ dict size
+
+  |       occurrencesOf: anElement
+                  |^ dict at: anElement ifAbsent: [0]
+
+  |       first
+                  dict first.
+                  |^ dict currentKey
+
+  |       next
+                  dict next.
+                  |^ dict currentKey
+
+  ]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                       September 19, 1986
+
+
+
+
+
+
+
+
+                           _A_p_p_e_n_d_i_x _4
+                       _P_r_i_m_i_t_i_v_e _N_u_m_b_e_r_s
+
+       The following chart gives  the  function  performed  by
+  each primitive in the Little Smalltalk system.
+
+  _I_n_f_o_r_m_a_t_i_o_n _a_b_o_u_t _o_b_j_e_c_t_s
+
+  0    (not used )
+
+  1    class of an object
+
+  2    superobject of an object
+
+  3    test if class responds to new
+
+  4    size of object
+
+  5    hash value
+
+  6    test if two built-in objects are of the same type
+
+  7    object equality testing ( == )
+
+  8    various switch toggles
+
+  9    numerical generality testing
+
+  _I_n_t_e_g_e_r _m_a_n_i_p_u_l_a_t_i_o_n
+
+  10   integer addition (both args must be integer)
+
+  11   integer subtraction
+
+  12   integer < test
+
+  13   integer > test
+
+  14   integer <_ test
+
+  15   integer >_ test
+
+  16   integer = test
+
+  17   integer ~= test
+
+  18   integer multiplication
+
+  19   integer //
+
+  _B_i_t _m_a_n_i_p_u_l_a_t_i_o_n _a_n_d _o_t_h_e_r _i_n_t_e_g_e_r _v_a_l_u_e_d _f_u_n_c_t_i_o_n_s
+
+  20   gcd:
+
+
+
+
+                       September 19, 1986
+
+
+
+
+
+
+
+
+  21   bitAt:
+
+  22   bitOr:
+
+  23   bitAnd:
+
+  24   bitXor:
+
+  25   bitShift:
+
+  26   radix:
+
+  27   not used
+
+  28   integer quo:
+
+  29   integer rem:
+
+  _O_t_h_e_r _i_n_t_e_g_e_r _f_u_n_c_t_i_o_n_s
+
+  30   doPrimitive:withArguments:
+
+  31   not used
+
+  32   convert random integer to random float
+
+  33   bitInvert
+
+  34   highBit
+
+  35   randomNumber (argument is seed )
+
+  36   asCharacter
+
+  37   asString
+
+  38   factorial
+
+  39   asFloat
+
+  _C_h_a_r_a_c_t_e_r _m_a_n_i_p_u_l_a_t_i_o_n
+
+  40   not used
+
+  41.  not used
+
+  42   character < test
+
+  43   character > test
+
+  44   character <_ test
+
+  45   character >_ test
+
+
+
+
+                       September 19, 1986
+
+
+
+
+
+
+
+
+  46   character = test
+
+  47   character ~= test
+
+  48   not used
+
+  49   not used
+
+  _C_h_a_r_a_c_t_e_r _u_n_a_r_y _f_u_n_c_t_i_o_n_s
+
+  50   digitValue
+
+  51   isVowel
+
+  52   isLetter
+
+  53   isLowerCase
+
+  54   isUpperCase
+
+  55   isSeparator
+
+  56   isAlphaNumeric
+
+  57   caseShift
+
+  58   asString
+
+  59   asciiValue
+
+  _F_l_o_a_t_i_n_g _p_o_i_n_t _m_a_n_i_p_u_l_a_t_i_o_n
+
+  60   floating point addition (both args must be float)
+
+  61   floating point subtraction
+
+  62   floating point < test
+
+  63   floating point > test
+
+  64   floating point <_ test
+
+  65   floating point >_ test
+
+  66   floating point = test
+
+  67   floating point ~= test
+
+  68   floating point multiplication
+
+  69   floating point division
+
+
+
+
+
+
+                       September 19, 1986
+
+
+
+
+
+
+
+
+  _O_t_h_e_r _f_l_o_a_t_i_n_g _p_o_i_n_t _o_p_e_r_a_t_i_o_n_s
+
+  70   ln
+
+  71   sqrt
+
+  72   floor
+
+  73   ceiling
+
+  74   not used
+
+  75   integerPart
+
+  76   fractionalPart
+
+  77   gamma
+
+  78   asString
+
+  79   exp
+
+  _O_t_h_e_r _n_u_m_e_r_i_c_a_l _f_u_n_c_t_i_o_n_s
+
+  80   normalize number to be within 0 and 2J.
+
+  81   sin
+
+  82   cos
+
+  83   not used
+
+  84   arcSin
+
+  85   arcCos
+
+  86   arcTan
+
+  87   not used
+
+  88   raisedTo:
+
+  89   radix:
+
+  _S_y_m_b_o_l _C_o_m_m_a_n_d_s
+
+  90.  not used
+
+  91   symbol comparison, returns true or false.
+
+  92   printString
+
+  93   asString
+
+
+
+
+                       September 19, 1986
+
+
+
+
+
+
+
+
+  94   print (used internally)
+
+  95   not used
+
+  96   not used
+
+  97   build a new class, arguments are class name, superclass
+       name,  instance  variables,  messages, methods, context
+       size.
+
+  98   insert an object into class dictionary, first  argument
+       is symbol, second argument is class definition
+
+  99   find an object in class dictionary.  argument  is  sym-
+       bol.
+
+  _S_t_r_i_n_g _o_p_e_r_a_t_i_o_n_s
+
+  100  string length
+
+  101  string compare, case important - return -1, 0 or 1.
+
+  102  string compare, case not important
+
+  103  string catenation
+
+  104  string at:
+
+  105  string at:put:
+
+  106  copyFrom:length:
+
+  107  copy (new string with same chars)
+
+  108  asSymbol
+
+  109  string printString
+
+  _A_r_r_a_y _m_a_n_i_p_u_l_a_t_i_o_n
+
+  110  build an untyped object  of  given  size,  argument  is
+       integer size.
+
+  111  index variable get (first argument is object, second is
+       index)
+
+  112  index variable put (first argument is object, second is
+       index, third argument is expression)
+
+  113  object grow (returns a new object  with  same  instance
+       variable  values  as  first  argument,  but with second
+       argument tacked on end as new instance variable)
+
+  114  build an instance of AAAArrrrrrrraaaayyyy of the given size.
+
+
+
+                       September 19, 1986
+
+
+
+
+
+
+
+
+  115  new string of given size
+
+  116  ByteArray new:
+
+  117  ByteArray size
+
+  118  ByteArray at:
+
+  119  ByteArray at:put:
+
+  _O_u_t_p_u_t _a_n_d _e_r_r_o_r _m_e_s_s_a_g_e_s
+
+  120  print string with no return
+
+  121  print string with return
+
+  122  general error - first argument is receiver,  second  is
+       error string
+
+  123  print string on error output (with return)
+
+  124  not used
+
+  125  unix system call
+
+  126  print a string at a specific point on the terminal
+
+  127  block return without surrounding context
+
+  128  reference count  less  than  zero,  first  argument  is
+       guilty object
+
+  129  does not respond error,  first  argument  is  receiver,
+       second is message.
+
+  _F_i_l_e _o_p_e_r_a_t_i_o_n_s
+
+  130  file open, first argument is name, second  argument  is
+       mode
+
+  131  file read
+
+  132  file write
+
+  133  set file mode, first argument is file, second  is  mode
+       indicator (anInteger)
+
+  134  compute file size in bytes
+
+  135  file set location (at:)  second  argument  is  location
+       (anInteger)
+
+  136  return current file offset in bytes
+
+
+
+
+                       September 19, 1986
+
+
+
+
+
+
+
+
+  137  not used
+
+  138  not used
+
+  139  not used
+
+  _P_r_o_c_e_s_s _m_a_n_a_g_e_m_e_n_t
+
+  140  block execute (trapped by interpreter)
+
+  141  new process (withArguments:)
+
+  142  terminate a process
+
+  143  perform:withArguments: (trapped by interpreter)
+
+  144. not used
+
+  145  set state
+
+  146  return state
+
+  148  start atomic action
+
+  149  end atomic action
+
+  _O_p_e_r_a_t_i_o_n_s _o_n _c_l_a_s_s_e_s
+
+  150  class edit
+
+  151  superclass of a class
+
+  152  class name (a Symbol)
+
+  153  new instance of a class
+
+  154  list all commands class responds to
+
+  155  respondsTo: , second argument is a symbol
+
+  156  class view (drop into editor, but no include)
+
+  157  class list
+
+  158  variables (returns an array of symbols)
+
+  159  not used
+
+  _D_a_t_e _a_n_d _T_i_m_e
+
+  160  current date and time as string
+
+  161  seconds time counter
+
+
+
+
+                       September 19, 1986
+
+
+
+
+
+
+
+
+  162  clear the screen
+
+  _P_l_o_t(_3) _i_n_t_e_r_f_a_c_e
+
+  170  clear the screen
+
+  171  move the cursor (move(x,y))
+
+  172  draw a line (cont(x,y))
+
+  173  draw a point (point(x,y))
+
+  174  draw a circle (circle(x,y,r))
+
+  175  draw an arc (arc(x,y,x0,y0,x1,y1))
+
+  176  establish the coordinate space (space(a,b,c,d))
+
+  177  draw a line (line(a,b,c,d))
+
+  178  print a label (label(s))
+
+  179  establish a line type (linemod(s))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                       September 19, 1986
+
+

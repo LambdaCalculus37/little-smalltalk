@@ -1,0 +1,5 @@
+-o parse
+y.tab.o
+parse1.o
+parse2.o
+-lm -lc
