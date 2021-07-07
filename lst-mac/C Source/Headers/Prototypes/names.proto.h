@@ -1,0 +1,1 @@
+/* names.c */noreturn nameTableInsert(object dict, int hash, object key, object value);object hashEachElement(object dict, int hash, int (*fun)(object obj));int strHash(char *str);static int strTest(object key);object globalKey(char *str);object nameTableLookup(object dict, char *str);noreturn initCommonSymbols(void);

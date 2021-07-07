@@ -1,0 +1,1 @@
+/* filein.c */object findClass(char *name);static void readClassDeclaration(void);static void readMethods (FILE *fd, boolean printit);void fileIn(FILE *fd, boolean printit);

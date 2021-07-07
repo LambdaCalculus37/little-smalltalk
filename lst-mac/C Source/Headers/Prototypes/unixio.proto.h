@@ -1,0 +1,1 @@
+/* unixio.c */noreturn imageRead (FILE *fp);noreturn imageWrite (FILE *fp);object ioPrimitive (int number, object *arguments);

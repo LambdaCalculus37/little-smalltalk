@@ -1,0 +1,1 @@
+/*	Little Smalltalk, version 3	Written by Tim Budd, Oregon State University, July 1988	Symantec Think Class Library interface code ©Julian Barkway, April 1994 	CLStSwitchboard.h	-----------------	Overridden methods from CSwitchboard*/#pragma once#include "CSwitchboard.h"struct CLStSwitchboard : CSwitchboard {	Boolean	GetAnEvent	(EventRecord *event);};

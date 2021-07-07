@@ -1,0 +1,1 @@
+/* initial.c */static void goDoIt				(char *text);static void makeInitialImage	(void);

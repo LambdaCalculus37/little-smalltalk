@@ -1,0 +1,1 @@
+/* primitive.c */int brkfun(void);int brkignore(void);int brkfun(void);int brkignore(void);object primitive(int primitiveNumber, object *arguments);

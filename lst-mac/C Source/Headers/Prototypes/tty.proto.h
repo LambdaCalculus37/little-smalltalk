@@ -1,0 +1,1 @@
+/* tty.c */noreturn sysError(char *s1, char *s2);noreturn sysWarn(char *s1, char *s2);int compilWarn(char *selector, char *str1, char *str2);int compilError(char *selector, char *str1, char *str2);noreturn dspMethod(char *cp, char *mp);int givepause(void);object sysPrimitive(int number, object *arguments);

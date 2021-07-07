@@ -1,0 +1,1 @@
+/* InitWinPrim.c */noreturn sysError(char *s1, char *s2);noreturn sysWarn(char *s1, char *s2);void compilWarn(char *selector, char *str1, char *str2);void compilError(char *selector, char *str1, char *str2);noreturn dspMethod(char *cp, char *mp);void givepause(void);object sysPrimitive(int primitiveNumber, object *arguments);

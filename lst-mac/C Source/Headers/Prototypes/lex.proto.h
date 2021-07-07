@@ -1,0 +1,1 @@
+/* lex.c */noreturn lexinit(char *str);char peek(void);tokentype nextToken(void);

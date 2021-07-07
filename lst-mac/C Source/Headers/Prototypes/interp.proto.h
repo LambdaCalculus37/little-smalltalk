@@ -1,0 +1,1 @@
+/* interp.c */static int messTest(object obj);void flushCache(object messageToSend, object class);static boolean findMethod(object *methodClassLocation);static object growProcessStack(int top, int toadd);boolean execute(object aProcess, int maxsteps);
