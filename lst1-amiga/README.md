@@ -13,7 +13,7 @@ The Amiga of Little Smalltalk falls under the same license clause as v1 of Littl
 
 **Additional Resources**
 
-The original archive was originall released on [Aminet](https://aminet.net/package/dev/lang/SmallTalk). I'm mirroring the source to keep it alongside the rest.
+The original archive was originally released on [Aminet](https://aminet.net/package/dev/lang/SmallTalk). I'm mirroring the source to keep it alongside the rest.
 
 Included in this source archive is an ADF of Little Smalltalk for use in FS-UAE, or to write to a floppy disk using tools like TS-GUI, or even to add to a USB stick and use with a Gotek.
 
