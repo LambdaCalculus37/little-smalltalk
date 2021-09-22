@@ -17,14 +17,15 @@ I created this repo as a means of keeping the source code of Little Smalltalk al
 As there are 5 (or rather, 5.1, if you count the 4.1 folder) major releases of Little Smalltalk, I have mirrored the source for all of them here. The versions included are as follows:
 
 1. Version 1 (lst1) - The original release as described in Budd's book!
-2. Version 1 (lst-amiga) - An Amiga release of Little Smalltalk. The source and an ADF disk image for emulators is included.
-3. Version 2 (lst2) - The second release; according to the READ_ME included in the source folder, this is a beta release originally posted to comp.sources.unix way back in the day.
-4. Version 3 (lst3) - The third release; this is public domain, cross-platform, and compiles on nearly anything with the right toolchains. It even compiles on modern Linux without issue! This version has patches contributed by Charles Childers (crc).
-5. Version 3.1.5 (lst-mac) - A release of Little Smalltalk 3.1.5 for Classic Mac OS; this is the source code for that release.
-6. Version 4 (lst4) - The fourth release; this version was the last one worked on by Timothy Budd and picked up by Danny Reinhold.
-7. Version 4.1 (lst4.1) - Same as above, but can compile in Windows.
-8. Version 5 (lst5) - The fifth release; this version never made it past its 7th alpha release.
-9. Documentation (docs) - A PDF copy of *A Little Smalltalk* is included with this repo. This book is freely distributable.
+2. Version 1 (lst1-amiga) - An Amiga release of Little Smalltalk. The source and an ADF disk image for emulators is included.
+3. Version 1 (lst1-atarist) - An Atari ST release of Little Smalltalk. No source has been found, but the binaries are included and can be used on a real ST, or with Hatari if added to a GEMDOS drive. An ST floppy disk image is also included.
+4. Version 2 (lst2) - The second release; according to the READ_ME included in the source folder, this is a beta release originally posted to comp.sources.unix way back in the day.
+5. Version 3 (lst3) - The third release; this is public domain, cross-platform, and compiles on nearly anything with the right toolchains. It even compiles on modern Linux without issue! This version has patches contributed by Charles Childers (crc).
+6. Version 3.1.5 (lst-mac) - A release of Little Smalltalk 3.1.5 for Classic Mac OS; this is the source code for that release.
+7. Version 4 (lst4) - The fourth release; this version was the last one worked on by Timothy Budd and picked up by Danny Reinhold.
+8. Version 4.1 (lst4.1) - Same as above, but can compile in Windows.
+9. Version 5 (lst5) - The fifth release; this version never made it past its 7th alpha release.
+10. Documentation (docs) - A PDF copy of *A Little Smalltalk* is included with this repo. This book is freely distributable.
 
 
 **Compiling**
