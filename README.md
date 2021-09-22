@@ -24,6 +24,7 @@ As there are 5 (or rather, 5.1, if you count the 4.1 folder) major releases of L
 6. Version 4 (lst4) - The fourth release; this version was the last one worked on by Timothy Budd and picked up by Danny Reinhold.
 7. Version 4.1 (lst4.1) - Same as above, but can compile in Windows.
 8. Version 5 (lst5) - The fifth release; this version never made it past its 7th alpha release.
+9. Documentation (docs) - A PDF copy of *A Little Smalltalk* is included with this repo. This book is freely distributable.
 
 
 **Compiling**
@@ -34,7 +35,7 @@ To compile, simply switch to the folder of the version you want to use and run '
 
 **Using Little Smalltalk**
 
-The book, *A Little Smalltalk*, is available to read [here](http://sdmeta.gforge.inria.fr/FreeBooks/LittleSmalltalk/ALittleSmalltalk.pdf), and gives a good overview of the commands and workings.
+The book, *A Little Smalltalk*, is available in the docs/ directory of this repo as a PDF, and gives a good overview of the commands and workings.
 
 **License**
 
