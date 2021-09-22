@@ -1,0 +1,3278 @@
+
+
+
+
+
+
+OOOObbbbjjjjeeeecccctttt
+
+     The class OOOObbbbjjjjeeeecccctttt is a superclass of all classes in  the
+system,  and  is  used  to  provide a consistent basic func-
+tionality and  default  behavior.   Many  methods  in  class
+OOOObbbbjjjjeeeecccctttt are overridden in subclasses.
+
+_R_e_s_p_o_n_d_s _t_o
+
+  ==           Return true if receiver and argument are  the
+               same object, false otherwise.
+
+  ~~           Inverse of ==.
+
+  asString     Return  a  string   representation   of   the
+               receiver,  by  default  this  is  the same as
+               _p_r_i_n_t_S_t_r_i_n_g, although one  or  the  other  is
+               redefined in many subclasses.
+
+  asSymbol     Return a symbol representing the receiver.
+
+  class        Return object representing the class  of  the
+               receiver.
+
+  copy         Return shallowCopy of receiver.   Many  subc-
+               lasses redefine shallowCopy.
+
+  deepCopy     Return the receiver.  This  method  is  rede-
+               fined in many subclasses.
+
+_d do:          The argument must be a  one  argument  block.
+               Execute  the  block  on  every element of the
+               receiver   collection.    Elements   in   the
+               receiver  collection  are  listed using _f_i_r_s_t
+               and _n_e_x_t (below), so the default behavior  is
+               merely   to   execute  the  block  using  the
+               receiver as argument.
+
+  error:       Argument must be a  String.   Print  argument
+               string as error message.  Return nnnniiiillll.
+
+_n first        Return first item in sequence,  which  is  by
+               default   simply  the  receiver.   See  _n_e_x_t,
+               below.
+
+  isKindOf:    Argument must be a  CCCCllllaaaassssssss.   Return  true  if
+               class of receiver, or any superclass thereof,
+               is the same as argument.
+
+  isMemberOf:  Argument must be a  CCCCllllaaaassssssss.   Return  true  if
+               receiver is instance of argument class.
+
+
+
+
+
+
+
+
+
+
+
+
+  class OOOObbbbjjjjeeeecccctttt (continued)
+
+
+    isNil        Test whether receiver is object nnnniiiillll.
+
+  _n next         Return next item in  sequence,  which  is  by
+                 default  nnnniiiillll.   This  message is redefined in
+                 classes which represent  sequences,  such  as
+                 AAAArrrrrrrraaaayyyy or DDDDiiiiccccttttiiiioooonnnnaaaarrrryyyy.
+
+    notNil       Test if receiver is not object nnnniiiillll.
+
+    print        Display print image of receiver on the  stan-
+                 dard output.
+
+    printString  Return a string representation  of  receiver.
+                 Objects  which  do  not redefine printString,
+                 and which therefore do not have  a  printable
+                 representation,  return their class name as a
+                 string.
+
+    respondsTo:  Argument must be a symbol.   Return  true  if
+                 receiver  will  respond to the indicated mes-
+                 sage.
+
+    shallowCopy  Return the receiver.  This  method  is  rede-
+                 fined in many subclasses.
+
+  _E_x_a_m_p_l_e_s
+
+                                          Printed result
+
+  7 ~~ 7.0                                True
+  7 asSymbol                              #7
+  7 class                                 Integer
+  7 copy                                  7
+  7 isKindOf: Number                      True
+  7 isMemberOf: Number                    False
+  7 isNil                                 False
+  7 respondsTo: #+                        True
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  Object
+    UUUUnnnnddddeeeeffffiiiinnnneeeeddddOOOObbbbjjjjeeeecccctttt
+
+       The pseudo variable nnnniiiillll is  an  instance  (usually  the
+  only instance) of the class UUUUnnnnddddeeeeffffiiiinnnneeeeddddOOOObbbbjjjjeeeecccctttt.  nnnniiiillll is used to
+  represent undefined values, and is also  typically  returned
+  in  error  situations.   nnnniiiillll is also used as a terminator in
+  sequences, as for example in response to  the  message  _n_e_x_t
+  when there are no further elements in a sequence.
+
+  _R_e_s_p_o_n_d_s _t_o
+
+  _r isNil        Overrides method  found  in  Object.   Return
+                 true.
+
+  _r notNil       Overrides method  found  in  Object.   Return
+                 false.
+
+  _r printString  Return 'nil'.
+
+  _E_x_a_m_p_l_e_s
+
+                                          Printed result
+
+  nil isNil                               True
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  Object
+    SSSSyyyymmmmbbbboooollll
+
+       Instances of the class SSSSyyyymmmmbbbboooollll  are  created  either  by
+  their literal representation, which is a pound sign followed
+  by a string of nonspace characters (for example #aSymbol  ),
+  or  by the message _a_s_S_y_m_b_o_l being passed to an object.  Sym-
+  bols cannot be created using _n_e_w.  Symbols are guaranteed to
+  have unique representations; that is, two symbols represent-
+  ing the same characters  will  always  test  equal  to  each
+  other.  Inside of literal arrays, the leading pound signs on
+  symbols can be eliminated, for  example:  #(these  are  sym-
+  bols).
+
+  _R_e_s_p_o_n_d_s _t_o
+
+  _r ==           Return true if the two symbols represent  the
+                 same characters, false otherwise.
+
+  _r asString     Return a String representation of the  symbol
+                 without the leading pound sign.
+
+  _r printString  Return a String representation of the symbol,
+                 including the leading pound sign.
+
+  _E_x_a_m_p_l_e_s
+
+                                          Printed result
+
+  #abc == #abc                            True
+  #abc == #ABC                            False
+  #abc ~~ #ABC                            True
+  #abc printString                        #abc
+  'abc' asSymbol                          #abc
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  Object
+    BBBBoooooooolllleeeeaaaannnn
+
+       The class BBBBoooooooolllleeeeaaaannnn provides  protocol  for  manipulating
+  true  and false values.  The pseudo variables ttttrrrruuuueeee and ffffaaaallllsssseeee
+  are instances of the subclasses of BBBBoooooooolllleeeeaaaannnn; TTTTrrrruuuueeee and  FFFFaaaallllsssseeee,
+  respectively.  The subclasses TTTTrrrruuuueeee and FFFFaaaallllsssseeee, in combination
+  with blocks,  are  used  to  implement  conditional  control
+  structures.   Note, however, that the bytecodes may optimize
+  conditional tests by generating code  in-line,  rather  than
+  using  message  passing.   Note that bit-wise boolean opera-
+  tions are provided by class IIIInnnntttteeeeggggeeeerrrr.
+
+  _R_e_s_p_o_n_d_s _T_o
+
+    &            The argument must be a boolean.   Return  the
+                 logical conjunction (and) of the two values.
+
+    |            The argument must be a boolean.   Return  the
+                 logical disjunction (or) of the two values.
+
+    and:         The argument must be  a  block.   Return  the
+                 logical  conjunction (and) of the two values.
+                 If the receiver is false the second  argument
+                 is  not  used,  otherwise  the  result is the
+                 value  yielded  in  evaluating  the  argument
+                 block.
+
+    or:          The argument must be  a  block.   Return  the
+                 logical  disjunction  (or) of the two values.
+                 If the receiver is true the  second  argument
+                 is  not  used,  otherwise  the  result is the
+                 value  yielded  in  evaluating  the  argument
+                 block.
+
+    eqv:         The argument must be a boolean.   Return  the
+                 logical equivalence (eqv) of the two values.
+
+    xor:         The argument must be a boolean.   Return  the
+                 logical exclusive or (xor) of the two values.
+
+  _E_x_a_m_p_l_e_s
+
+                                          Printed result
+
+  (1 > 3) & (2 < 4)                       False
+  (1 > 3) | (2 < 4)                       True
+  (1 > 3) and: [2 < 4]                    False
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  Object
+    Boolean
+      TTTTrrrruuuueeee
+
+       The pseudo variable ttttrrrruuuueeee is an  instance  (usually  the
+  only instance) of the class TTTTrrrruuuueeee.
+
+  _R_e_s_p_o_n_d_s _T_o
+
+    ifTrue:      Return the result of evaluating the  argument
+                 block.
+
+    ifFalse:     Return nnnniiiillll.
+
+    ifTrue:ifFalse:
+                 Return the result  of  evaluating  the  first
+                 argument block.
+
+    ifFalse:ifTrue:
+                 Return the result of  evaluating  the  second
+                 argument block.
+
+    not          Return ffffaaaallllsssseeee.
+
+  _E_x_a_m_p_l_e_s
+
+                                          Printed result
+
+  (3 < 5) not                             False
+  (3 < 5) ifTrue: [17]                    17
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  Object
+    Boolean
+      FFFFaaaallllsssseeee
+
+       The pseudo variable ffffaaaallllsssseeee is an instance  (usually  the
+  only instance) of the class FFFFaaaallllsssseeee.
+
+    ifTrue:      Return nnnniiiillll.
+
+    ifFalse:     Return the result of evaluating the  argument
+                 block.
+
+    ifTrue:ifFalse:
+                 Return the result of  evaluating  the  second
+                 argument block.
+
+    ifFalse:ifTrue:
+                 Return the result  of  evaluating  the  first
+                 argument block.
+
+    not          Return ttttrrrruuuueeee.
+
+  _E_x_a_m_p_l_e_s
+
+                                          Printed result
+
+  (1 < 3) ifTrue: [17]                    17
+  (1 < 3) ifFalse: [17]                   nil
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  Object
+    MMMMaaaaggggnnnniiiittttuuuuddddeeee
+
+       The class MMMMaaaaggggnnnniiiittttuuuuddddeeee provides protocol for  those  subc-
+  lasses  possessing a linear ordering.  For the sake of effi-
+  ciency, most subclasses redefine some or all  of  the  rela-
+  tional  messages.   All  methods are defined in terms of the
+  basic messages <, = and >, which are in turn defined  circu-
+  larly  in terms of each other.  Thus each subclass of MMMMaaaaggggnnnniiii----
+  ttttuuuuddddeeee must redefine at least one of these messages.
+
+    <            Relational  less  than   test.    Returns   a
+                 boolean.
+
+    <=           Relational less than or equal test.
+
+    =            Relational  equal  test.   Note   that   this
+                 differs  from ==, which is an object equality
+                 test.
+
+    ~=           Relational not equal test, opposite of =.
+
+    >=           Relational greater than or equal test.
+
+    >            Relational greater than test.
+
+    between:and: Relational test for inclusion.
+
+    max:         Return the maximum of the receiver and  argu-
+                 ment value.
+
+    min:         Return the minimum of the receiver and  argu-
+                 ment value.
+
+  _E_x_a_m_p_l_e_s
+
+                                          Printed result
+
+  $A max: $a                              $a
+  4 between: 3.1 and: (17/3)              True
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  Object
+    Magnitude
+      CCCChhhhaaaarrrr
+
+       This class defines protocol for objects with  character
+  values.   Characters possess an ordering given by the under-
+  lying representation, however arithmetic is not defined  for
+  character  values.   Characters  are  written  literally  by
+  preceding the character desired  with  a  dollar  sign,  for
+  example: $a   $B   $$.
+
+  _R_e_s_p_o_n_d_s _t_o
+
+  _r ==           Object equality test.  Two instances  of  the
+                 same character always test equal.
+
+    asciiValue   Return  an  IIIInnnntttteeeeggggeeeerrrr  representing  the  ascii
+                 value of the receiver.
+
+    asLowercase  If  the  receiver  is  an  uppercase   letter
+                 returns  the same letter in lowercase, other-
+                 wise returns the receiver.
+
+    asUppercase  If the receiver is a lowercase letter returns
+                 the   same  letter  in  uppercase,  otherwise
+                 returns the receiver.
+
+  _r asString     Return a length  one  string  containing  the
+                 receiver.   Does  not  contain leading dollar
+                 sign, compare to _p_r_i_n_t_S_t_r_i_n_g.
+
+    digitValue   If the  receiver  represents  a  number  (for
+                 example  $9)  return  the  digit value of the
+                 number.  If  the  receiver  is  an  uppercase
+                 letter  (for  example $B) return the position
+                 of the number in the uppercase letters +  10,
+                 ($B   returns   11,  for  example).   If  the
+                 receiver is neither a digit nor an  uppercase
+                 letter an error is given and nnnniiiillll returned.
+
+    isAlphaNumericRespond true if receiver is either digit  or
+                 letter, false otherwise.
+
+    isDigit      Respond true if receiver is  a  digit,  false
+                 otherwise.
+
+    isLetter     Respond true if receiver is a  letter,  false
+                 otherwise.
+
+    isLowercase  Respond  true  if  receiver  is  a  lowercase
+                 letter, false otherwise.
+
+    isSeparator  Respond true if receiver is a space,  tab  or
+
+
+
+
+
+
+
+
+
+
+  class CCCChhhhaaaarrrr (continued)
+
+
+                 newline, false otherwise.
+
+    isUppercase  Respond true  if  receiver  is  an  uppercase
+                 letter, false otherwise.
+
+    isVowel      Respond true if receiver is $a, $e, $i, $o or
+                 $u, in either upper or lower case.
+
+  _r printString  Respond with a string representation  of  the
+                 character  value.   Includes  leading  dollar
+                 sign, compare to  _a_s_S_t_r_i_n_g,  which  does  not
+                 include $.
+
+  _E_x_a_m_p_l_e_s
+
+                                          Printed result
+
+  $A < $0                                 False
+  $A asciiValue                           65
+  $A asString                             A
+  $A printString                          $A
+  $A isVowel                              True
+  $A digitValue                           10
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  Object
+    Magnitude
+      NNNNuuuummmmbbbbeeeerrrr
+
+       The class NNNNuuuummmmbbbbeeeerrrr is an abstract superclass for  IIIInnnntttteeeeggggeeeerrrr
+  and  FFFFllllooooaaaatttt.  Instances of NNNNuuuummmmbbbbeeeerrrr cannot be created directly.
+  Relational messages and many arithmetic messages  are  rede-
+  fined  in  each  subclass  for  arguments of the appropriate
+  type.  In  general,  an  error  message  is  given  and  nnnniiiillll
+  returned for illegal arguments.
+
+  _R_e_s_p_o_n_d_s _T_o
+
+    +            Mixed type addition.
+
+    -            Mixed type subtraction.
+
+    *            Mixed type multiplication
+
+    /            Mixed type division.
+
+  _n |^            Exponentiation, same as raisedTo: .
+
+    @            Construct a point with coordinates being  the
+                 receiver and the argument.
+
+    abs          Absolute value of the receiver.
+
+    exp          e raised to the power.
+
+  _n gamma        Return the gamma function  (generalized  fac-
+                 torial) evaluated at the receiver.
+
+    ln           Natural logarithm of the receiver.
+
+    log:         Logarithm in the given base.
+
+    negated      The arithmetic inverse of the receiver.
+
+    negative     True if the receiver is negative.
+
+  _n pi           Return the approximate value of the  receiver
+                 multiplied by  (3.1415926...).
+
+    positive     True if the receiver is positive.
+
+  _n radians      Argument converted into radians.
+
+    raisedTo:    The receiver raised to the argument value.
+
+    reciprocal   The arithmetic reciprocal of the receiver.
+
+    roundTo:     The receiver rounded to units  of  the  argu-
+
+
+
+
+
+
+
+
+
+
+  class NNNNuuuummmmbbbbeeeerrrr (continued)
+
+
+                 ment.
+
+    sign         Return -1, 0 or 1 depending upon whether  the
+                 receiver is negative, zero or positive.
+
+    sqrt         Square root.  nil if receiver  is  less  than
+                 zero.
+
+    squared      Return the receiver multiplied by itself.
+
+    strictlyPositive
+                 True if the receiver is greater than zero.
+
+    to:          Interval from receiver to argument value with
+                 step of 1.
+
+    to:by:       Interval from receiver to argument  in  given
+                 steps.
+
+    truncatedTo: The receiver truncated to units of the  argu-
+                 ment.
+
+  _E_x_a_m_p_l_e_s
+
+                                          Printed result
+
+  3 < 4.1                                 True
+  3 + 4.1                                 7.1
+  3.14159 exp                             23.1406
+  9 gamma                                 40320
+  5 reciprocal                            0.2
+  0.5 radians                             0.5 radians
+  13 roundTo: 5                           15
+  13 truncateTo: 5                        10
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  Object
+    Magnitude
+      Number
+        IIIInnnntttteeeeggggeeeerrrr
+
+       The class IIIInnnntttteeeeggggeeeerrrr provides protocol  for  objects  with
+  integer values.
+
+  _R_e_s_p_o_n_d_s _T_o
+
+  _r ==           Object   equality   test.     Two    integers
+                 representing the same value are considered to
+                 be the same object.
+
+    //           Integer quotient, truncated towards  negative
+                 infinity (compare to _q_u_o:).
+
+    \\           Integer remainder, truncated towards negative
+                 infinity (compare to _r_e_m:).
+
+    allMask:     Argument must be IIIInnnntttteeeeggggeeeerrrr.  Treating  receiver
+                 and  argument  as bit strings, return ttttrrrruuuueeee if
+                 all bits with 1 value in argument  correspond
+                 to bits with 1 values in the receiver.
+
+    anyMask:     Argument must be IIIInnnntttteeeeggggeeeerrrr.  Treating  receiver
+                 and  argument  as bit strings, return true if
+                 any bit with 1 value in argument  corresponds
+                 to a bit with 1 value in the receiver.
+
+    asCharacter  Return the  Char  with  the  same  underlying
+                 ascii  representation  as the low order eight
+                 bits of the receiver.
+
+    asFloat      Floating point value with same  magnitude  as
+                 receiver.
+
+    bitAnd:      Argument  must  be  IIIInnnntttteeeeggggeeeerrrr.   Treating   the
+                 receiver  and argument as bit strings, return
+                 logical aaaannnndddd of values.
+
+    bitAt:       Argument must be IIIInnnntttteeeeggggeeeerrrr greater than  0  and
+                 less  than  underlying  word  size.  Treating
+                 receiver as a  bit  string,  return  the  bit
+                 value  at  the given position, numbering from
+                 low order (or rightmost) position.
+
+    bitInvert    Return the receiver with  all  bit  positions
+                 inverted.
+
+    bitOr:       Return logical oooorrrr of values.
+
+    bitShift:    Treating the receiver as a bit string,  shift
+                 bit  values  by amount indicated in argument.
+
+
+
+
+
+
+
+
+
+  class IIIInnnntttteeeeggggeeeerrrr (continued)
+
+
+                 Negative values shift right, positive left.
+
+    bitXor:      Return logical eeeexxxxcccclllluuuussssiiiivvvveeee----oooorrrr of values.
+
+    even         Return true if receiver is even, false other-
+                 wise.
+
+    factorial    Return the factorial of the receiver.  Return
+                 as Float for large numbers.
+
+    gcd:         Argument  must  be   IIIInnnntttteeeeggggeeeerrrr.    Return   the
+                 greatest  common  divisor of the receiver and
+                 argument.
+
+    highBit      Return the location of the highest 1  bit  in
+                 the receiver.  Return nnnniiiillll for receiver zero.
+
+    lcm:         Argument must be IIIInnnntttteeeeggggeeeerrrr.  Return least  com-
+                 mon multiple of receiver and argument.
+
+    noMask:      Argument must be IIIInnnntttteeeeggggeeeerrrr.  Treating  receiver
+                 and  argument  as bit strings, return true if
+                 no 1 bit in the argument corresponds to  a  1
+                 bit in the receiver.
+
+    odd          Return true if receiver is odd, false  other-
+                 wise.
+
+    quo:         Return quotient of receiver divided by  argu-
+                 ment.
+
+    radix:       Return  a  string   representation   of   the
+                 receiver   value,   printed   in   the   base
+                 represented by the argument.  Argument  value
+                 must be less than 36.
+
+    rem:         Remainder after receiver is divided by  argu-
+                 ment value.
+
+    timesRepeat: Repeat argument block  the  number  of  times
+                 given by the receiver.
+
+  _E_x_a_m_p_l_e_s
+
+                                          Printed result
+
+  5 + 4                                   7
+  5 allMask: 4                            True
+  4 allMask: 5                            False
+  5 anyMask: 4                            True
+  5 bitAnd: 3                             1
+  5 bitOr: 3                              7
+  5 bitInvert                             -6
+  254 radix: 16                           16rFE
+
+
+
+
+
+
+
+
+
+  class IIIInnnntttteeeeggggeeeerrrr (continued)
+
+
+  -5 // 4                                 -2
+  -5 quo: 4                               -1
+  -5 \\ 4                                 1
+  -5 rem: 4                               -1
+  8 factorial                             40320
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  Object
+    Magnitude
+      Number
+        FFFFllllooooaaaatttt
+
+       The class FFFFllllooooaaaatttt  provides  protocol  for  objects  with
+  floating point values.
+
+  _R_e_s_p_o_n_d_s _T_o
+
+  _r ==           Object equality test.   Return  true  if  the
+                 receiver  and  argument  represent  the  same
+                 floating point value.
+
+  _n |^            Floating exponentiation.
+
+    arcCos       Return a RRRRaaaaddddiiiiaaaannnn representing  the  arcCos  of
+                 the receiver.
+
+    arcSin       Return a RRRRaaaaddddiiiiaaaannnn representing  the  arcSin  of
+                 the receiver.
+
+    arcTan       Return a RRRRaaaaddddiiiiaaaannnn representing  the  arcTan  of
+                 the receiver.
+
+    asFloat      Return the receiver.
+
+    ceiling      Return the Integer ceiling of the receiver.
+
+    coerce:      Coerce the argument into being type Float.
+
+    exp          Return e raised to the receiver value.
+
+    floor        Return the Integer floor of the receiver.
+
+    fractionPart Return the fractional part of the receiver.
+
+  _n gamma        Return  the  value  of  the  gamma   function
+                 applied to the receiver value.
+
+    integerPart  Return the integer part of the receiver.
+
+    ln           Return the natural log of the receiver.
+
+    radix:       Return  a  string  containing  the  printable
+                 representation  of  the receiver in the given
+                 radix.  Argument must be an Integer less than
+                 36.
+
+    rounded      Return the receiver rounded  to  the  nearest
+                 integer.
+
+
+
+
+
+
+
+
+
+
+
+
+  class FFFFllllooooaaaatttt (continued)
+
+
+    sqrt         Return the square root of the receiver.
+
+    truncated    Return the receiver truncated to the  nearest
+                 integer.
+
+  _E_x_a_m_p_l_e_s
+
+                                          Printed result
+
+  4.2 * 3                                 12.6
+  2.1 |^ 4                                 19.4481
+  2.1 raisedTo: 4                         19.4481
+  0.5 arcSin                              0.523599 radians
+  2.1 reciprocal                          0.47619
+  4.3 sqrt                                2.07364
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  Object
+    Magnitude
+      RRRRaaaaddddiiiiaaaannnn
+
+       The class RRRRaaaaddddiiiiaaaannnn is used to represent radians.  Radians
+  are  a  unit  of  measurement, independent of other numbers.
+  Only radians will responds to  the  trigonometric  functions
+  such  as _s_i_n and _c_o_s.  Numbers can be converted into radians
+  by passing them the message _r_a_d_i_a_n_s.  Similarly, radians can
+  be  converted  into  numbers  by  sending  them  the message
+  _a_s_F_l_o_a_t.  Notice that only a  limited  range  of  arithmetic
+  operations are permitted on Radians.  Radians are normalized
+  to be between 0 and 2J.
+
+  _R_e_s_p_o_n_d_s _t_o
+
+    +            Argument must be a Radian.  Add the two radi-
+                 ans   together   and  return  the  normalized
+                 result.
+
+    -            Argument must  be  a  Radian.   Subtract  the
+                 argument  from  the  receiver  and return the
+                 normalized result.
+
+    *            Argument must  be  a  Number.   Multiply  the
+                 receiver  by  the  argument amount and return
+                 the normalized result.
+
+    /            Argument  must  be  a  Number.   Divide   the
+                 receiver  by  the  argument amount and return
+                 the normalized result.
+
+    asFloat      Return  the  receiver  as  a  floating  point
+                 number.
+
+    cos          Return a floating point  number  representing
+                 the cosine of the receiver.
+
+    sin          Return a floating point  number  representing
+                 the sine of the receiver.
+
+    tan          Return a floating point  number  representing
+                 the tangent of the receiver.
+
+  _E_x_a_m_p_l_e_s
+
+                                          Printed result
+
+  0.5236 radians sin                      0.5
+  0.5236 radians cos                      0.866025
+  0.5236 radians tan                      0.577352
+  0.5 arcSin asFloat                      0.523599
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  Object
+    Magnitude
+      PPPPooooiiiinnnntttt
+
+       PPPPooooiiiinnnntttts are used to represent pairs of quantities,  such
+  as coordinate pairs.
+
+  _R_e_s_p_o_n_d_s _T_o
+
+    <            True if both values of the receiver are  less
+                 than  the  corresponding  values in the argu-
+                 ment.
+
+    <=           True if the first value is less than or equal
+                 to  the  corresponding value in the argument,
+                 and  the  second  value  is  less  than   the
+                 corresponding value in the argument.
+
+    >=           True if  both  values  of  the  receiver  are
+                 greater  than  or  equal to the corresponding
+                 values in the argument.
+
+    *            Return a new point  with  coordinates  multi-
+                 plied by the argument value.
+
+    /            Return a new point with  coordinates  divided
+                 by the argument value.
+
+    //           Return a new point with  coordinates  divided
+                 by the argument value.
+
+    +            Return a new point with coordinates offset by
+                 the corresponding values in the argument.
+
+    abs          Return a new point  with  coordinates  having
+                 the absolute value of the receiver.
+
+    dist:        Return the  Euclidean  distance  between  the
+                 receiver and the argument point.
+
+    max:         The argument must be  a  PPPPooooiiiinnnntttt.   Return  the
+                 lower  right  corner of the rectangle defined
+                 by the receiver and the argument.
+
+    min:         The argument must be  a  PPPPooooiiiinnnntttt.   Return  the
+                 upper left corner of the rectangle defined by
+                 the receiver and the argument.
+
+    transpose    Return a new point with coordinates being the
+                 transpose of the receiver.
+
+
+
+
+
+
+
+
+
+
+
+
+
+  class PPPPooooiiiinnnntttt (continued)
+
+
+    x            Return the first coordinate of the receiver.
+
+    x:           Set the first coordinate of the receiver.
+
+    x:y:         Sets both coordinates of the receiver.
+
+    y            Return the second coordinate of the receiver.
+
+    y:           Set the second coordinate of the receiver.
+
+  _E_x_a_m_p_l_e_s
+
+                                          Printed result
+
+  (10@12) < (11@14)                       True
+  (10@12) < (11@11)                       False
+  (10@12) max: (11@11)                    11@12
+  (10@12) min: (11@11)                    10@11
+  (10@12) dist: (11@14)                   2.23607
+  (10@12) transpose                       12@10
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  Object
+    RRRRaaaannnnddddoooommmm
+
+       The class RRRRaaaannnnddddoooommmm provides protocol  for  random  number
+  generation.  Sending the message _n_e_x_t to an instance of RRRRaaaannnn----
+  ddddoooommmm results in a FFFFllllooooaaaatttt between 0.0 and 1.0, randomly distri-
+  buted.   By  default, the pseudo random sequence is the same
+  for each object in class RRRRaaaannnnddddoooommmm.  This can be altered  using
+  the message _r_a_n_d_o_m_i_z_e.
+
+  _R_e_s_p_o_n_d_s _T_o
+
+  _n between:and: Return a random number uniformly  distributed
+                 between the two arguments.
+
+  _n first        Return a random number between 0.0  and  1.0.
+                 This message merely provides consistency with
+                 protocol for other sequences, such as  Arrays
+                 or Intervals.
+
+    next         Return a random number between 0.0 and 1.0.
+
+  _d next:        Return an AAAArrrrrrrraaaayyyy containing the next n  random
+                 numbers, where n is the argument value.
+
+  _n randInteger: The argument must be an  integer.   Return  a
+                 random integer between 1 and the value given.
+
+  _n randomize    Change  the  pseudo-random  number  generator
+                 seed by a time dependent value.
+
+  _E_x_a_m_p_l_e_s
+
+                                          Printed result
+
+  i <- Random new
+  i next                                  0.759
+  i next                                  0.157
+  i next: 3                               #( 0.408 0.278 0.547 )
+  i randInteger: 12                       5
+  i between: 4 and: 17.5                  10.0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  Object
+    CCCCoooolllllllleeeeccccttttiiiioooonnnn
+
+       The class CCCCoooolllllllleeeeccccttttiiiioooonnnn provides protocol  for  groups  of
+  objects, such as AAAArrrrrrrraaaayyyys or SSSSeeeetttts. The different forms of col-
+  lections are distinguished by several characteristics, among
+  them  whether  the  size  of  the  collection  is  fixed  or
+  unbounded, the presence or absence of an ordering, and their
+  insertion or access method.  For example, an AAAArrrrrrrraaaayyyy is a col-
+  lection with a fixed size and ordering, indexed  by  integer
+  keys.  A DDDDiiiiccccttttiiiioooonnnnaaaarrrryyyy, on the other hand, has no fixed size or
+  ordering,  and  can  be  indexed  by   arbitrary   elements.
+  Nevertheless,  AAAArrrrrrrraaaayyyyssss and DDDDiiiiccccttttiiiioooonnnnaaaarrrryyyyssss share many features in
+  common, such as their access method (_a_t: and  _a_t:_p_u_t:),  and
+  the  ability to respond to _c_o_l_l_e_c_t:, _s_e_l_e_c_t:, and many other
+  messages.
+
+       The table below lists some of  the  characteristics  of
+  several forms of collections:
+
+8  ___________________________________________________________________
+
+   Name         Creation    Size    Ordered?   Insertion    Access
+                 Method    fixed?               method      method
+
+8  ___________________________________________________________________
+
+   Bag/Set        new        no        no        add:      includes:
+
+   Dictionary     new        no        no       at:put:       at:
+
+   Interval     n to: m     yes       yes        none         at:
+
+   List           new        no       yes      addFirst:     first
+                                               addLast:      last
+
+   Array          new:      yes       yes       at:put:       at:
+
+   String         new:      yes       yes       at:put:       at:
+
+8  ___________________________________________________________________
+7  |7|7|7|7|7|7|7|7|7|7|7|7|7|7|7|7|7|7|
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                     |7|7|7|7|7|7|7|7|7|7|7|7|7|7|7|7|7|7|
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       The list below shows messages that are shared in common
+  by all collections.
+
+  _R_e_s_p_o_n_d_s _t_o
+
+    addAll:      The argument must be a CCCCoooolllllllleeeeccccttttiiiioooonnnn.   Add  all
+                 the  elements  of  the argument collection to
+                 the receiver collection.
+
+    asArray      Return a new collection of  type  AAAArrrrrrrraaaayyyy  con-
+                 taining  the  elements from the receiver col-
+                 lection.  If the receiver  was  ordered,  the
+                 elements will be in the same order in the new
+
+
+9
+
+
+
+
+
+  class CCCCoooolllllllleeeeccccttttiiiioooonnnn (continued)
+
+
+                 collection, otherwise the elements will be in
+                 an arbitrary order.
+
+    asBag        Return a new collection of type BBBBaaaagggg  contain-
+                 ing  the  elements  from the receiver collec-
+                 tion.
+
+  _n asList       Return a new collection of type LLLLiiiisssstttt contain-
+                 ing  the  elements  from the receiver collec-
+                 tion.  If the receiver was ordered, the  ele-
+                 ments  will  be  in the same order in the new
+                 collection, otherwise the elements will be in
+                 an arbitrary order.
+
+    asSet        Return a new collection of type SSSSeeeetttt  contain-
+                 ing  the  elements  from the receiver collec-
+                 tion.
+
+    asString     Return a new collection of type  SSSSttttrrrriiiinnnngggg  con-
+                 taining  the  elements from the receiver col-
+                 lection.  The elements to  be  included  must
+                 all  be  of  type CCCChhhhaaaarrrraaaacccctttteeeerrrr.  If the receiver
+                 was ordered, the elements will be in the same
+                 order  in  the  new collection, otherwise the
+                 elements  will  be  listed  in  an  arbitrary
+                 order.
+
+    coerce:      The argument must be a collection.  Return  a
+                 collection, of the same type as the receiver,
+                 containing elements from the argument collec-
+                 tion.   This  message  is  redefined  in most
+                 subclasses of collection.
+
+    collect:     The argument must be a  one  argument  block.
+                 Return  a  new collection, like the receiver,
+                 containing the result of evaluating the argu-
+                 ment  block  on  each element of the receiver
+                 collection.
+
+    detect:      The argument must be a  one  argument  block.
+                 Return the first element in the receiver col-
+                 lection for which the argument  block  evalu-
+                 ates true.  Report an error and return nnnniiiillll if
+                 no such element exists.  Note that  in  unor-
+                 dered  collections  (such as BBBBaaaaggggssss or DDDDiiiiccccttttiiiioooonnnn----
+                 aaaarrrryyyyssss) the first  element  to  be  encountered
+                 that  will  satisfy  the condition may not be
+                 easily predictable.
+
+    detect:ifAbsent:
+                 Return the first element in the receiver col-
+                 lection  for  which  the first argument block
+                 evaluates  true.   Return   the   result   of
+                 evaluating  the  second  argument  if no such
+
+
+
+
+
+
+
+
+
+  class CCCCoooolllllllleeeeccccttttiiiioooonnnn (continued)
+
+
+                 element exists.
+
+    do:          The argument must be a  one  argument  block.
+                 Evaluate  the  argument block on each element
+                 in the receiver collection.
+
+    includes:    Return true if the receiver  collection  con-
+                 tains the argument.
+
+    inject:into: The first  argument  must  be  a  value,  the
+                 second  a  two  argument  block.   The second
+                 argument is evaluated once for  each  element
+                 in  the receiver collection, passing as argu-
+                 ments the result of the  previous  evaluation
+                 (starting  with  the  first argument) and the
+                 element.  The value  returned  is  the  final
+                 value generated.
+
+    isEmpty      Return true if the receiver  collection  con-
+                 tains no elements.
+
+    occurrencesOf:Return the  number  of  times  the  argument
+                 occurs in the receiver collection.
+
+    remove:      Remove the argument from the receiver collec-
+                 tion.   Report an error if the element is not
+                 contained in the receiver collection.
+
+    remove:ifAbsent:
+                 Remove the first argument from  the  receiver
+                 collection.   Evaluate the second argument if
+                 not present.
+
+    reject:      The argument must be a  one  argument  block.
+                 Return  a  new  collection  like the receiver
+                 containing all elements for which  the  argu-
+                 ment block returns false.
+
+    select:      The argument must be a  one  argument  block.
+                 Return  a  new  collection  like the receiver
+                 containing all elements for which  the  argu-
+                 ment block returns true.
+
+    size         Return the number of elements in the receiver
+                 collection.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  class CCCCoooolllllllleeeeccccttttiiiioooonnnn (continued)
+
+
+  _E_x_a_m_p_l_e_s
+
+                                          Printed result
+
+  i <- 'abacadabra'
+  i size                                  10
+  i asArray                               #( $a $b $a $c $a $d $a $b $r $a )
+  i asBag                                 Bag ( $a $a $a $a $a $r $b $b $c $d)
+  i asSet                                 Set ( $a $r $b $c $d )
+  i occurrencesOf: $a                     5
+  i reject: [:x | x isVowel]              bcdbr
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  Object
+    Collection
+      BBBBaaaagggg////SSSSeeeetttt
+
+       BBBBaaaaggggssss and SSSSeeeettttssss are each unordered  collections  of  ele-
+  ments. Elements in the collections do not have keys, but are
+  added and removed directly.  The difference  between  a  BBBBaaaagggg
+  and a SSSSeeeetttt is that each element can occur any number of times
+  in a BBBBaaaagggg, whereas only one copy is inserted into a SSSSeeeetttt.
+
+  _R_e_s_p_o_n_d_s _t_o
+
+    add:         Add the indicated  element  to  the  receiver
+                 collection.
+
+    add:withOccurences:
+                 (BBBBaaaagggg only) Add the indicated element  to  the
+                 receiver BBBBaaaagggg the given number of times.
+
+  _n first        Return the first element  from  the  receiver
+                 collection.   As the collection is unordered,
+                 the first element depends upon certain values
+                 in  the  internal  representation, and is not
+                 guaranteed to be any specific element in  the
+                 collection.
+
+  _n next         Return the next element  in  the  collection.
+                 In  conjunction  with _f_i_r_s_t, this can be used
+                 to access each element of the  collection  in
+                 turn.
+
+  _E_x_a_m_p_l_e_s
+
+                                          Printed result
+
+  i <- (1 to: 6) asBag                    Bag ( 1 2 3 4 5 6 )
+  i size                                  6
+  i select: [:x | (x \\ 2) strictlyPositive]Bag ( 1 3 5 )
+  i collect: [:x | x \\ 3]                Bag ( 0 0 1 1 2 2 )
+  j <- ( i collect: [:x | x \\ 3] ) asSet Set ( 0 1 2 )
+  j size                                  3
+
+  NNNNooootttteeee:::: Since BBBBaaaaggggssss and SSSSeeeettttssss are unordered, there is no way  to
+  establish a mapping between the elements of the Bag i in the
+  example above and the corresponding elements in the  collec-
+  tion that resulted from the message collect: [:x | x \\ 3].
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  Object
+    Collection
+      KKKKeeeeyyyyeeeeddddCCCCoooolllllllleeeeccccttttiiiioooonnnn
+
+       The class KKKKeeeeyyyyeeeeddddCCCCoooolllllllleeeeccccttttiiiioooonnnn provides protocol for collec-
+  tions with keys, such as DDDDiiiiccccttttiiiioooonnnnaaaarrrryyyyssss and AAAArrrrrrrraaaayyyyssss.  Since each
+  entry in the collection has both a key and value, the method
+  _a_d_d: is no longer appropriate.  Instead, the method _a_t:_p_u_t:,
+  which provides both a key and a value, must be used.
+
+  _R_e_s_p_o_n_d_s _t_o
+
+    asDictionary Return a new collection  of  type  DDDDiiiiccccttttiiiioooonnnnaaaarrrryyyy
+                 containing  the  elements  from  the receiver
+                 collection.
+
+    at:          Return the item in  the  receiver  collection
+                 whose key matches the argument.  Produces and
+                 error message, and returns nil, if no item is
+                 currently  in  the  receiver collection under
+                 the given key.
+
+    at:ifAbsent: Return the element stored in  the  dictionary
+                 under  the  key  given by the first argument.
+                 Return the result of  evaluating  the  second
+                 argument if no such element exists.
+
+    atAll:put:   The first argument must be a collection  con-
+                 taining keys valid for the receiver.  At each
+                 location given by a key in the first argument
+                 place the second argument.
+
+    binaryDo:    The argument must be a  two  argument  block.
+                 This  message is similar to _d_o:, however both
+                 the key and the element value are  passed  as
+                 argument to the block.
+
+    includesKey: Return true if the indicated key is valid for
+                 the receiver collection.
+
+    indexOf:     Return the key value of the first element  in
+                 the  receiver  collection  matching the argu-
+                 ment.  Produces an error message if  no  such
+                 element  exists.  Note that, as with the mes-
+                 sage _d_e_t_e_c_t:, in  unordered  collections  the
+                 first  element  may not be related in any way
+                 to the order in which  elements  were  placed
+                 into  the collection, but is rather implemen-
+                 tation dependent.
+
+    indexOf:ifAbsent:
+                 Return the key value of the first element  in
+                 the  receiver  collection  matching the argu-
+                 ment.  Return the result  of  evaluating  the
+
+
+
+
+
+
+
+
+
+  class KKKKeeeeyyyyeeeeddddCCCCoooolllllllleeeeccccttttiiiioooonnnn (continued)
+
+
+                 second argument if no such element exists.
+
+    keys         Return a Set  containing  the  keys  for  the
+                 receiver collection.
+
+    keysDo:      The argument must be a  one  argument  block.
+                 Similar to _d_o:, except that the values passed
+                 to the block are the  keys  of  the  receiver
+                 collection.
+
+    keysSelect:  Similar to _s_e_l_e_c_t, except that the  selection
+                 is  made  on  the  basis  of  keys instead of
+                 values.
+
+    removeKey:   Remove the object with the given key from the
+                 receiver collection.  Print an error message,
+                 and return nnnniiiillll, if  no  such  object  exists.
+                 Return the value of the deleted item.
+
+    removeKey:ifAbsent:
+                 Remove the object with the given key from the
+                 receiver  collection.   Return  the result of
+                 evaluating the second  argument  if  no  such
+                 object exists.
+
+    values       Return a Bag containing the values  from  the
+                 receiver collection.
+
+  _E_x_a_m_p_l_e_s
+
+                                          Printed result
+
+  i <- 'abacadabra'
+  i atAll: (1 to: 7 by: 2) put: $e        ebecedebra
+  i indexOf: $r                           9
+  i atAll: i keys put: $z                 zzzzzzzzzz
+  i keys                                  Set ( 1 2 3 4 5 6 7 8 9 10 )
+  i values                                Bag ( $z $z $z $z $z $z $z $z $z $z )
+  #(how odd) asDictionary                 Dictionary ( 1 @ #how 2 @ odd )
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  Object
+    Collection
+      KeyedCollection
+        DDDDiiiiccccttttiiiioooonnnnaaaarrrryyyy
+
+       A DDDDiiiiccccttttiiiioooonnnnaaaarrrryyyy is an unordered collection of elements, as
+  are  BBBBaaaaggggssss and SSSSeeeettttssss.  However, unlike these collections, ele-
+  ments inserted and removed from a DDDDiiiiccccttttiiiioooonnnnaaaarrrryyyy must  reference
+  an explicit key.  Both the key and value portions of an ele-
+  ment can be any  object,  although  commonly  the  keys  are
+  instances of SSSSyyyymmmmbbbboooollll or NNNNuuuummmmbbbbeeeerrrr.
+
+  _R_e_s_p_o_n_d_s _t_o
+
+    at:put:      Place the second argument into  the  receiver
+                 collection  under  the key given by the first
+                 argument.
+
+    currentKey   Return the key of the last element yielded in
+                 response to a _f_i_r_s_t or _n_e_x_t request.
+
+  _n first        Return the first element of the receiver col-
+                 lection.   Return nil if the receiver collec-
+                 tion is empty.
+
+  _n next         Return the next element of the receiver  col-
+                 lection, or nil if no such element exists.
+
+  _E_x_a_m_p_l_e_s
+
+                                          Printed result
+
+  i <- Dictionary new
+  i at: #abc put: #def
+  i at: #pqr put: #tus
+  i at: #xyz put: #wrt
+  i print                       Dictionary ( #abc @ #def #pqr @ #tus #xyz @ #wrt )
+  i size                        3
+  i at: #pqr                    #tus
+  i indexOf: #tus               #pqr
+  i keys                        Set ( #abc #pqr #xyz )
+  i values                      Bag ( #wrt #def # tus )
+  i collect: [:x | x asString at: 2]Dictionary ( #abc @ $e #pqr @ $u #xyz @ $r)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  Object
+    Collection
+      KeyedCollection
+        Dictionary
+          SSSSmmmmaaaallllllllttttaaaallllkkkk
+
+       The class SSSSmmmmaaaallllllllttttaaaallllkkkk provides protocol  for  the  pseudo
+  variable  ssssmmmmaaaallllllllttttaaaallllkkkk.   Since it is a subclass of Dictionary,
+  this variable can be used to  store  information,  and  thus
+  provide  a  means  of  communication between objects.  Other
+  messages  modify  various  parameters  used  by  the  Little
+  Smalltalk system.
+
+  _R_e_s_p_o_n_d_s _T_o
+
+  _n date         Return the current date and time as a string.
+
+  _n display      Set execution display to display  the  result
+                 of   every  expression  typed,  but  not  for
+                 assignments.  Note that the display  behavior
+                 can also be modified using the -d argument on
+                 the command line.
+
+  _n displayAssignSet execution display to display  the  result
+                 of  every expression typed, including assign-
+                 ment statements.
+
+  _n doPrimitive:withArguments:
+                 Execute the indicated  primitive  with  argu-
+                 ments given by the second array.  A few prim-
+                 itives (such as those  dealing  with  process
+                 management)   cannot   be  executed  in  this
+                 manner.
+
+  _n noDisplay    Turn off execution display - no results  will
+                 be  displayed  unless explicitly requested by
+                 the user.
+
+  _d perform:withArguments:
+                 Send indicated message to the receiver, using
+                 the  arguments given.  The first value in the
+                 argument array is taken to be the receiver of
+                 the  message.   Unpredictable  results if the
+                 number of arguments is  not  appropriate  for
+                 the given message.
+
+  _n sh:          The argument, which must be a string, is exe-
+                 cuted  as  a  Unix command by the shell.  The
+                 value returned is the termination  status  of
+                 the shell.
+
+  _n time:        The argument must be a block.  The  block  is
+                 executed,  and  the number of seconds elapsed
+                 during  execution  returned.   Time  is  only
+
+
+
+
+
+
+
+
+
+  class SSSSmmmmaaaallllllllttttaaaallllkkkk (continued)
+
+
+                 accurate to within about one second.
+
+  _E_x_a_m_p_l_e_s
+
+                                          Printed result
+
+  smalltalk date                          Fri Apr 12 16:15:42 1985
+  smalltalk perform: #+ withArguments: #(2 5)7
+  smalltalk doPrimitive: 10 withArguments: #(2 5)7
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  Object
+    Collection
+      KeyedCollection
+        SSSSeeeeqqqquuuueeeennnncccceeeeaaaabbbblllleeeeCCCCoooolllllllleeeeccccttttiiiioooonnnn
+
+       The class SSSSeeeeqqqquuuueeeennnncccceeeeaaaabbbblllleeeeCCCCoooolllllllleeeeccccttttiiiioooonnnn contains protocol  for
+  collections that have a definite sequential ordering and are
+  indexed by integer keys.  Since there is a fixed  order  for
+  elements,  it  is possible to refer to the last element in a
+  SSSSeeeeqqqquuuueeeennnncccceeeeaaaabbbblllleeeeCCCCoooolllllllleeeeccccttttiiiioooonnnn.
+
+  _R_e_s_p_o_n_d_s _t_o
+
+    ,            Appends  the  argument  collection   to   the
+                 receiver  collection, returning a new collec-
+                 tion of the same type as the receiver.
+
+    copyFrom:to: Return a new collection, like  the  receiver,
+                 containing  the  designated subportion of the
+                 receiver collection.
+
+    copyWith:    Return a new collection, like  the  receiver,
+                 with the argument added to the end.
+
+    copyWithout: Return a new collection, like  the  receiver,
+                 with all occurrences of the argument removed.
+
+    equals:startingAt:
+                 The first argument must be a SSSSeeeeqqqquuuueeeennnncccceeeeaaaabbbblllleeeeCCCCoooollll----
+                 lllleeeeccccttttiiiioooonnnn.   Return true if each element of the
+                 receiver   collection   is   equal   to   the
+                 corresponding  element in the argument offset
+                 by the amount given in the second argument.
+
+    findFirst:   Find the key  for  the  first  element  whose
+                 value  satisfies the argument block.  Produce
+                 an error message if no such element exists.
+
+    findFirst:ifAbsent:
+                 Both arguments must be blocks.  Find the  key
+                 for  the  first element whose value satisfies
+                 the first argument block.  If no such element
+                 exists  return  the value of the second argu-
+                 ment.
+
+    findLast:    Find the key for the last element whose value
+                 satisfies  the  argument  block.   Produce an
+                 error message if no such element exists.
+
+    findLast:ifAbsent:
+                 Both arguments must be blocks.  Find the  key
+                 for  the  last  element whose value satisfies
+                 the first argument block.  If no such element
+                 exists   return   the  value  of  the  second
+
+
+
+
+
+
+
+
+
+  class SSSSeeeeqqqquuuueeeennnncccceeeeaaaabbbblllleeeeCCCCoooolllllllleeeeccccttttiiiioooonnnn (continued)
+
+
+                 argument block.
+
+    firstKey     Return the first key valid for  the  receiver
+                 collection.
+
+    indexOfSubCollection:startingAt:
+                 Starting at the position given by the  second
+                 argument,  find the next block of elements in
+                 the receiver collection which match the  col-
+                 lection  given  by  the  first  argument, and
+                 return the index for the start of that block.
+                 Produce  an error message if no such position
+                 exists.
+
+    indexOfSubCollection:startingAt:ifAbsent:
+                 Similar to  _i_n_d_e_x_O_f_S_u_b_C_o_l_l_e_c_t_i_o_n:_s_t_a_r_t_i_n_g_A_t:,
+                 except that the result of the exception block
+                 is produced if no  position  exists  matching
+                 the pattern.
+
+    last         Return the last element in the receiver  col-
+                 lection.
+
+    lastKey      Return the last key valid  for  the  receiver
+                 collection.
+
+    replaceFrom:to:with:
+                 Replace the elements in the receiver  collec-
+                 tion  in the positions indicated by the first
+                 two arguments with values taken from the col-
+                 lection given by the third argument.
+
+    replaceFrom:to:with:startingAt:
+                 Replace the elements in the receiver  collec-
+                 tion  in the positions indicated by the first
+                 two arguments with values taken from the col-
+                 lection given in the third argument, starting
+                 at the position given by the fourth argument.
+
+  _n reversed     Return a collection, like the receiver,  with
+                 elements reversed.
+
+    reverseDo:   Similar to _d_o:, except  that  the  items  are
+                 presented in reverse order.
+
+  _n sort         Return a collection, like the receiver,  with
+                 the  elements sorted using the comparison <=.
+                 Elements must  be  able  to  respond  to  the
+                 binary message <=.
+
+  _n sort:        The argument must be  a  two  argument  block
+                 which yields a boolean.  Return a collection,
+                 like the receiver, sorted using the  argument
+                 to   compare  elements  for  the  purpose  of
+
+
+
+
+
+
+
+
+
+  class SSSSeeeeqqqquuuueeeennnncccceeeeaaaabbbblllleeeeCCCCoooolllllllleeeeccccttttiiiioooonnnn (continued)
+
+
+                 ordering.
+
+    with:do:     The second argument must be  a  two  argument
+                 block.  Present one element from the receiver
+                 collection and from the collection  given  by
+                 the  first  argument  in  turn  to the second
+                 argument block.  An error message is given if
+                 the  collections  do not have the same number
+                 of elements.
+
+  _E_x_a_m_p_l_e_s
+
+                                          Printed result
+
+  i <- 'abacadabra'
+  i copyFrom: 4 to: 8                     cadab
+  i copyWith: $z                          abacadabraz
+  i copyWithout: $a                       bcdbr
+  i findFirst: [:x | x > $m]              9
+  i indexOfSubCollection: 'dab' startingAt: 16
+  i reversed                              arbadacaba
+  i , i reversed                          abacadabraarbadacaba
+  i sort: [:x :y | x >= y]                rdcbbaaaaa
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  Object
+    Collection
+      KeyedCollection
+        SequenceableCollection
+          IIIInnnntttteeeerrrrvvvvaaaallll
+
+       The class IIIInnnntttteeeerrrrvvvvaaaallll represents a sequence of numbers  in
+  an  arithmetic  sequence,  either  ascending  or descending.
+  Instances of IIIInnnntttteeeerrrrvvvvaaaallll are created by numbers in response  to
+  the  message _t_o: or _t_o:_b_y:.  In conjunction with the message
+  _d_o:, IIIInnnntttteeeerrrrvvvvaaaallllssss create a control structure similar to  do  or
+  for loops in Algol like languages.  For example:
+
+
+                 (1 to: 10) do: [:x | x print]
+
+
+  will print the numbers 1 through 10.  Although  they  are  a
+  collection,  IIIInnnntttteeeerrrrvvvvaaaallllssss  cannot  be added to.  They can, how-
+  ever, be accessed randomly using the message _a_t:.
+
+  _R_e_s_p_o_n_d_s _t_o
+
+    first        Produce the first element from the  interval.
+                 In conjunction with _l_a_s_t, this message may be
+                 used to produce each element from the  inter-
+                 val   in  turn.   Note  that  IIIInnnntttteeeerrrrvvvvaaaallllssss  also
+                 respond to the message _a_t:, which can be used
+                 to produce elements in an arbitrary order.
+
+    from:to:by:  Initialize the upper and lower bounds and the
+                 step  size  for  the receiver.  (This is used
+                 principally  internally  by  the  method  for
+                 number to create new Intervals).
+
+    next         Produce the next element from the interval.
+
+    size         Return the number of elements  that  will  be
+                 generated in producing the interval.
+
+  _E_x_a_m_p_l_e_s
+
+                                          Printed result
+
+  (7 to: 13 by: 3) asArray                #( 7 10 13 )
+  (7 to: 13 by: 3) at: 2                  10
+  (1 to: 10) inject: 0 into: [:x :y | x + y]55
+  (7 to: 13) copyFrom: 2 to: 5            #( 8 9 10 11 )
+  (3 to: 5) copyWith: 13                  #( 3 4 5 13 )
+  (3 to: 5) copyWithout: 4                #( 3 5 )
+  (2 to: 4) equals: (1 to: 4) startingAt: 2True
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  Object
+    Collection
+      KeyedCollection
+        SequenceableCollection
+          LLLLiiiisssstttt
+
+       Lists represent collections with  a  fixed  order,  but
+  indefinite  size.   No keys are used, and elements are added
+  or removed from one end of the other.   Used  in  this  way,
+  Lists  can  perform as _s_t_a_c_k_s or as _q_u_e_u_e_s.  The table below
+  illustrates how stack and queue  operations  can  be  imple-
+  mented in terms of messages to instances of List.
+
+  _s_t_a_c_k _o_p_e_r_a_t_i_o_n_s          _q_u_e_u_e _o_p_e_r_a_t_i_o_n_s
+
+8  _____________________________________________________________
+  push         addLast:     add                     addLast:
+  pop          removeLast   first in queue          first
+  top          last         remove first in queue   removeFirst
+  test empty   isEmpty      test empty              isEmpty
+7                          |8|7|7|7|7|7|
+
+
+
+
+
+
+9
+  _R_e_s_p_o_n_d_s _t_o
+
+    add:         Add the  element  to  the  beginning  of  the
+                 receiver  collection.   This  is  the same as
+                 _a_d_d_F_i_r_s_t:.
+
+    addAllFirst: The argument must  be  a  SequenceableCollec-
+                 tion.   The  elements  of  the  argument  are
+                 added, in order, to the front of the receiver
+                 collection.
+
+    addAllLast:  The argument must  be  a  SequenceableCollec-
+                 tion.   The  elements  of  the  argument  are
+                 added, in order, to the end of  the  receiver
+                 collection.
+
+    addFirst:    The argument is added to  the  front  of  the
+                 receiver collection.
+
+    addLast:     The argument is added  to  the  back  of  the
+                 receiver collection.
+
+    removeFirst  Remove the first element  from  the  receiver
+                 collection, returning the removed value.
+
+    removeLast   Remove the last  element  from  the  receiver
+                 collection, returning the removed value.
+
+
+
+
+
+9
+
+
+
+
+
+
+
+
+  class LLLLiiiisssstttt (continued)
+
+
+  _E_x_a_m_p_l_e_s
+
+                                          Printed result
+
+  i <- List new
+  i addFirst: 2 / 3                       List ( 0.6666 )
+  i add: $A
+  i addAllLast: (12 to: 14 by: 2)
+  i print                                 List ( 0.6666 $A 12 14 )
+  i first                                 0.6666
+  i removeLast                            14
+  i print                                 List ( 0.6666 $A 12 )
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  Object
+    Collection
+      KeyedCollection
+        SequenceableCollection
+          List
+            SSSSeeeemmmmaaaapppphhhhoooorrrreeee
+
+       Semaphores are used to synchronize concurrently running
+  PPPPrrrroooocccceeeesssssssseeeessss.
+
+  _R_e_s_p_o_n_d_s _T_o
+
+    new:         If created using _n_e_w, a SSSSeeeemmmmaaaapppphhhhoooorrrreeee starts  out
+                 with  zero  excess signals.  Alternatively, a
+                 SSSSeeeemmmmaaaapppphhhhoooorrrreeee can be created  with  an  arbitrary
+                 number  of  excess  signals  by  giving it an
+                 argument to _n_e_w:.
+
+    signal       If there is a process blocked  on  the  sema-
+                 phore  is  it scheduled for execution, other-
+                 wise the number of excess signals  is  incre-
+                 mented by one.
+
+    wait         If there are excess signals  associated  with
+                 the semaphore the number of signals is decre-
+                 mented by one, otherwise the current  process
+                 is placed on the semaphore queue.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  Object
+    Collection
+      KeyedCollection
+        SequenceableCollection
+          FFFFiiiilllleeee
+
+       A FFFFiiiilllleeee is a type of collection where  the  elements  of
+  the collection are stored on an external medium, typically a
+  disk.  For this reason, although most operations on  collec-
+  tions  are defined for files, many can be quite slow in exe-
+  cution.  A file can be opened on  one  of  three  _m_o_d_e_s:  In
+  _c_h_a_r_a_c_t_e_r  mode  every  read returns a single character from
+  the file.  In _i_n_t_e_g_e_r mode every read returns a single word,
+  as  an  integer  value.  In _s_t_r_i_n_g mode every read returns a
+  single line, as a SSSSttttrrrriiiinnnngggg.  For writing, character and string
+  modes  will write the string representation of the argument,
+  while integer mode must write only a single integer.
+
+  _R_e_s_p_o_n_d_s _T_o
+
+    at:          Return the object  stored  at  the  indicated
+                 position.   Position  is given as a character
+                 count from the start of the file.
+
+    at:put:      Place the object at the indicated position in
+                 the  file.   Position is given as a character
+                 count from the start of the file.
+
+    characterModeSet the mode of the receiver file to  _c_h_a_r_a_c_-
+                 _t_e_r.
+
+    currentKey   Return the current position in the file, as a
+                 character count from the start of the file.
+
+    integerMode  Set the mode of the receiver file to _i_n_t_e_g_e_r.
+
+    open:        Open the indicated  file  for  reading.   The
+                 argument must be a SSSSttttrrrriiiinnnngggg.
+
+    open:for:    The _f_o_r: argument must be one of 'r', 'w'  or
+                 'r+'  (see  fopen(3)  in the Unix programmers
+                 manual).  Open  the  file  in  the  indicated
+                 mode.
+
+    read         Return the next object from the file.
+
+    size         Return the size of  the  file,  in  character
+                 counts.
+
+    stringMode   Set the mode of the receiver file to _s_t_r_i_n_g.
+
+    write:       Write the argument into the file.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  Object
+    Collection
+      KeyedCollection
+        SequenceableCollection
+          AAAArrrrrrrraaaayyyyeeeeddddCCCCoooolllllllleeeeccccttttiiiioooonnnn
+
+       The class AAAArrrrrrrraaaayyyyeeeeddddCCCCoooolllllllleeeeccccttttiiiioooonnnn provides protocol for  col-
+  lections  with  a Fixed size and integer keys.  Unlike other
+  collections,  which  are  created  using  the  message  _n_e_w,
+  instances of AAAArrrrrrrraaaayyyyeeeeddddCCCCoooolllllllleeeeccccttttiiiioooonnnn must be created using the one
+  argument message _n_e_w:.  The argument given with this message
+  must  be  a  positive  integer, representing the size of the
+  collection to be  created.   In  addition  to  the  protocol
+  shown,  many  of the methods inherited from superclasses are
+  redefined in this class.
+
+  _R_e_s_p_o_n_d_s _t_o
+
+    =            The argument must also  be  an  AAAArrrrrrrraaaayyyy.   Test
+                 whether  the  receiver  and the argument have
+                 equal elements listed in the same order.
+
+    at:ifAbsent: Return the element stored with the given key.
+                 Return  the  result  of evaluating the second
+                 argument if the key  is  not  valid  for  the
+                 receiver collection.
+
+  _n padTo:       Return an array like the received that is  at
+                 least as long as the argument value.  Returns
+                 the receiver if it is already longer than the
+                 argument.
+
+  _E_x_a_m_p_l_e_s
+
+                                          Printed result
+
+  'small' = 'small'                       True
+  'small' = 'SMALL'                       False
+  'small' asArray                         #( $s $m $a $l $l)
+  'small' asArray = 'small'               True
+  #(1 2 3) padTo: 5                       #(1 2 3 nil nil)
+  #(1 2 3) padTo: 2                       #(1 2 3)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  Object
+    Collection
+      KeyedCollection
+        SequenceableCollection
+          ArrayedCollection
+            AAAArrrrrrrraaaayyyy
+
+       Instances of the class AAAArrrrrrrraaaayyyy are perhaps the most  com-
+  monly used data structure in Smalltalk programs.  AAAArrrrrrrraaaayyyyssss are
+  represented textually by a pound sign preceding the list  of
+  array elements.
+
+  _R_e_s_p_o_n_d_s _t_o
+
+    at:          Return the item stored in the position  given
+                 by  the  argument.   An error message is pro-
+                 duced, and nnnniiiillll returned, if the  argument  is
+                 not a valid key.
+
+    at:put:      Store the second  argument  in  the  position
+                 given  by  the first argument.  An error mes-
+                 sage is produced, and nnnniiiillll  returned,  if  the
+                 argument is not a valid key.
+
+    grow:        Return a new array one  element  larger  than
+                 the   receiver,   with   the  argument  value
+                 attached to the end.  This is a slightly more
+                 efficient  command  than  _c_o_p_y_W_i_t_h:, although
+                 the effect is the same.
+
+  _E_x_a_m_p_l_e_s
+
+                                          Printed result
+
+  i <- #(110 101 97)
+  i size                                  3
+  i <- i grow: 116                        #( 110 101 97 116)
+  i <- i collect: [:x | x asCharacter]    #( #n #e #a #t )
+  i asString                              neat
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  Object
+    Collection
+      KeyedCollection
+        SequenceableCollection
+          ArrayedCollection
+            BBBByyyytttteeeeAAAArrrrrrrraaaayyyy
+
+       A BBBByyyytttteeeeAAAArrrrrrrraaaayyyy is a special form of  array  in  which  the
+  elements  must  be numbers in the range 0-255.  Instances of
+  BBBByyyytttteeeeAAAArrrrrrrraaaayyyy are given a very compact encoding,  and  are  used
+  extensively  internally  in  the Little Smalltalk system.  A
+  BBBByyyytttteeeeAAAArrrrrrrraaaayyyy can be  represented  textually  by  a  pound  sign
+  preceding the list of array elements surrounded by a pair of
+  square braces.
+
+  _R_e_s_p_o_n_d_s _t_o
+
+    at:          Return the item stored in the position  given
+                 by  the  argument.   An error message is pro-
+                 duced, and nnnniiiillll returned, if the  argument  is
+                 not a valid key.
+
+    at:put:      Store the second  argument  in  the  position
+                 given  by  the first argument.  An error mes-
+                 sage is produced, and nnnniiiillll  returned,  if  the
+                 argument is not a valid key.
+
+  _E_x_a_m_p_l_e_s
+
+                                          Printed result
+
+  i <- #[110 101 97]
+  i size                                  3
+  i <- i copyWith: 116                    #[ 110 101 97 116 ]
+  i <- i asArray collect: [:x | x asCharacter]#( #n #e #a #t )
+  i asString                              neat
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  Object
+    Collection
+      KeyedCollection
+        SequenceableCollection
+          ArrayedCollection
+            SSSSttttrrrriiiinnnngggg
+
+       Instances of the class SSSSttttrrrriiiinnnngggg are  similar  to  AAAArrrrrrrraaaayyyyssss,
+  except  that  the  individual  elements  must  be CCCChhhhaaaarrrraaaacccctttteeeerrrr.
+  SSSSttttrrrriiiinnnnggggssss are represented literally by  placing  single  quote
+  marks  around  the characters making up the string.  SSSSttttrrrriiiinnnnggggssss
+  also differ from AAAArrrrrrrraaaayyyyssss in that Strings possess an ordering,
+  given by the underlying ascii sequence.
+
+  _R_e_s_p_o_n_d_s _t_o
+
+    ,            Concatenates the  argument  to  the  receiver
+                 string, producing a new string.  If the argu-
+                 ment is not a SSSSttttrrrriiiinnnngggg it  is  first  converted
+                 using _p_r_i_n_t_S_t_r_i_n_g.
+
+    <            The argument must be a SSSSttttrrrriiiinnnngggg.  Test  if  the
+                 receiver is lexically less than the argument.
+                 For the purposes of comparison  case  differ-
+                 ences are ignored.
+
+    <=           Test if the receiver is lexically  less  than
+                 or equal to the argument.
+
+    >=           Test if the  receiver  is  lexically  greater
+                 than or equal to the argument.
+
+    >            Test if the  receiver  is  lexically  greater
+                 than the argument.
+
+  _r asSymbol     Return a SSSSyyyymmmmbbbboooollll with characters given by  the
+                 receiver string.
+
+    at:          Return the character stored at  the  position
+                 given by the argument. Produce and error mes-
+                 sage, and return nnnniiiillll, if  the  argument  does
+                 not represent a valid key.
+
+    at:put:      Store the character given by second  argument
+                 at  the location given by the first argument.
+                 Produce an error message, and return nnnniiiillll,  if
+                 either argument is invalid.
+
+  _n copyFrom:length:
+                 Return a substring of the receiver.  The sub-
+                 string  is  taken from the indicated starting
+                 position in the receiver and extends for  the
+                 given  length.  Produce an error message, and
+                 return nnnniiiillll, if the given  positions  are  not
+
+
+
+
+
+
+
+
+
+  class SSSSttttrrrriiiinnnngggg (continued)
+
+
+                 legal.
+
+  _r copyFrom:to: Return a substring of the receiver.  The sub-
+                 string is taken from the indicated positions.
+                 Produce an error message, and return nnnniiiillll,  if
+                 the given positions are not legal.
+
+  _n printAt:     The argument must be a PPPPooooiiiinnnntttt which  describes
+                 a  location  on  the  terminal  screen.   The
+                 string is printed at the specified location.
+
+    size         Return the number of characters stored in the
+                 string.
+
+    sameAs:      Return true  if  the  receiver  and  argument
+                 string  match  with  the  exception  of  case
+                 differences.  Note that the boolean message =
+                 ,  inherited  from  ArrayedCollection, can be
+                 used to see  if  two  strings  are  the  same
+                 including case differences.
+
+  _E_x_a_m_p_l_e_s
+
+                                          Printed result
+
+  'example' at: 2                         $x
+  'bead' at: 1 put: $r                    read
+  'small' > 'BIG'                         True
+  'small' sameAs: 'SMALL'                 True
+  'tary' sort                             arty
+  'Rats live on no evil Star' reversed    ratS live on no evil staR
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  Object
+    BBBBlllloooocccckkkk
+
+       Although it is easy for  the  programmer  to  think  of
+  blocks  as  a  syntactic  construct, or a control structure,
+  they are actually objects, and share attributes of all other
+  objects  in  the  Smalltalk  system,  such as the ability to
+  respond to messages.
+
+  _R_e_s_p_o_n_d_s _t_o
+
+    fork         Start the block executing as a PPPPrrrroooocccceeeessssssss.   The
+                 value  nnnniiiillll  is  immediately returned, and the
+                 PPPPrrrroooocccceeeessssssss created from the block  is  scheduled
+                 to run in parallel with the current process.
+
+    forkWith:    Similar to _f_o_r_k, except  that  the  array  is
+                 passed  as  arguments  to  the receiver block
+                 prior to scheduling for execution.
+
+    newProcess   A new PPPPrrrroooocccceeeessssssss is created for the  block,  but
+                 is not scheduled for execution.
+
+  _n newProcessWith:
+                 Similar to _n_e_w_P_r_o_c_e_s_s, except that the  array
+                 is  passed as arguments to the receiver block
+                 prior to it being made into a process.
+
+    value        Evaluates the receiver  block.   Produces  an
+                 error   message,  and  returns  nil,  if  the
+                 receiver block  required  arguments.   Return
+                 the value yielded by the block.
+
+    value:       Evaluates the receiver  block.   Produces  an
+                 error   message,  and  returns  nil,  if  the
+                 receiver block did not require a single argu-
+                 ment.  Return the value yielded by the block.
+
+    value:value: Two argument block evaluation.
+
+    value:value:value:
+                 Three argument block evaluation.
+
+    value:value:value:value:
+                 Four argument block evaluation.
+
+    value:value:value:value:value:
+                 Five argument block evaluation.
+
+    whileTrue:   The receiver block is  repeatedly  evaluated.
+                 While  it  evaluates  to  true,  the argument
+                 block is also evaluated.  Return nil when the
+
+
+
+
+
+
+
+
+
+
+
+  class BBBBlllloooocccckkkk (continued)
+
+
+                 receiver block no longer evaluates to true.
+
+    whileTrue    The receiver block  is  repeatedly  evaluated
+                 until it returns a value that is not true.
+
+    whileFalse:  The receiver block is  repeatedly  evaluated.
+                 While  it  evaluates  to  false, the argument
+                 block is also evaluated.  Return nil when the
+                 receiver block no longer evaluates to false.
+
+    whileFalse   The receiver block  is  repeatedly  evaluated
+                 until it returns a value that is not false.
+
+  _E_x_a_m_p_l_e_s
+
+                                          Printed result
+
+  ['block indeed'] value                  block indeed
+  [:x :y | x + y + 3] value: 5 value: 7   15
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  Object
+    CCCCllllaaaassssssss
+
+       The class  CCCCllllaaaassssssss  provides  protocol  for  manipulating
+  class  instances.   An  instance of class CCCCllllaaaassssssss is generated
+  for each class in the Smalltalk system.   New  instances  of
+  this  class are then formed by sending messages to the class
+  instance.
+
+  _R_e_s_p_o_n_d_s _t_o
+
+  _n deepCopy:    The argument  must  be  an  instance  of  the
+                 receiver  class.   A deepCopy of the argument
+                 is returned.
+
+  _n edit         The user is placed into a editor editing  the
+                 file  from  which  the  class description was
+                 originally obtained.  When  the  editor  ter-
+                 minates,   the   class  description  will  be
+                 reparsed  and  will  override  the   previous
+                 description.  See also _v_i_e_w (below).
+
+  _n list         Lists  all  subclasses  of  the  given  class
+                 recursively.  In particular, OOOObbbbjjjjeeeecccctttt _l_i_s_t will
+                 list the names of all the classes in the sys-
+                 tem.
+
+    new          A new  instance  of  the  receiver  class  is
+                 returned.   If  the  methods for the receiver
+                 contain protocol for _n_e_w,  the  new  instance
+                 will first be passed this message.
+
+    new:         A new  instance  of  the  receiver  class  is
+                 returned.   If  the  methods for the receiver
+                 contain protocol for _n_e_w:, the  new  instance
+                 will first be passed this message.
+
+  _n respondsTo   List all the messages that the current  class
+                 will respond to.
+
+  _d respondsTo:  The argument must be a Symbol.   Return  true
+                 if  the receiver class, or any of its superc-
+                 lasses, contains a method for  the  indicated
+                 message. Return false otherwise.
+
+  _n shallowCopy: The argument  must  be  an  instance  of  the
+                 receiver  class.   A shallowCopy of the argu-
+                 ment is returned.
+
+  _n superClass   Return the superclass of the receiver class.
+
+  _n variables    Return an array containing the names  of  the
+                 instance   variables  used  in  the  receiver
+
+
+
+
+
+
+
+
+
+
+  class CCCCllllaaaassssssss (continued)
+
+
+                 class.
+
+  _n view         Place the user into  an  editor  viewing  the
+                 class  description  from  which the class was
+                 created.  Changes made to the file will  not,
+                 however, affect the current class representa-
+                 tion.
+
+  _E_x_a_m_p_l_e_s
+
+                                          Printed result
+
+  Array new: 3                            #( nil nil nil )
+  Bag respondsTo: #add:                   True
+  SequenceableCollection superClass       KeyedCollection
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  Object
+    PPPPrrrroooocccceeeessssssss
+
+       Processes are created by the system, or by passing  the
+  message  _n_e_w_P_r_o_c_e_s_s  or  _f_o_r_k  to  a  block;  they cannot be
+  created directly by the user.
+
+  _R_e_s_p_o_n_d_s _T_o
+
+    block        The  receiver  process  is  marked  as  being
+                 blocked.   This  is  usually  the result of a
+                 semaphore wait.  Blocked  processes  are  not
+                 executed.
+
+    resume       If the receiver process has  been  _s_u_s_p_e_n_ded,
+                 it is rescheduled for execution.
+
+    suspend      If the receiver process is scheduled for exe-
+                 cution, it is marked as suspended.  Suspended
+                 processes are not executed.
+
+    state        The current state of the receiver process  is
+                 returned as a Symbol.
+
+    terminate    The receiver process is terminated.  Unlike a
+                 blocked  or  suspended  process, a terminated
+                 process cannot be restarted.
+
+    unblock      If the receiver process is currently blocked,
+                 it is scheduled for execution.
+
+    yield        Returns nnnniiiillll.  As a side effect,  however,  if
+                 there  are pending processes the current pro-
+                 cess is placed back on the process queue  and
+                 another process started.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

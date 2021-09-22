@@ -1,0 +1,132 @@
+
+
+
+
+
+         The following notes were prepared by Joe Waters, disk
+         librarian of Current Notes.
+
+          N O T E:  To fit all the files on a single disk, some had to
+         be compressed.  The folder "BIN" has the arc'd file
+         "LSTBIN.ARC" which contains "parse.ttp" and "ue.ttp (an early
+         version of MicroEmacs).  The folder  "DOCS" contains the body
+         of the manual (MANBODY) and three appendix files all combined
+         in the arc'd file "LSTDOC.ARC". The main "ARC" program and
+         its docs are included on this disk to allow you to expand
+         these compressed files.  To expand the documentation, for
+         example, move the LSTDOC.ARC file to a blank, newly formatted
+         disk along with the ARC.TTP program.  Then double-click on
+         ARC.TTP and, when asked for parameters, enter "x LSTDOC.ARC"
+         which is the comand to  eXtract files from the archive
+         LSTDOC.ARC.  Further options are explained in the ARC.DOC
+         file.  You must expand the file PARSE.TTP in the BIN folder
+         to get LITTLE SMALLTALK to work. All the example programs are
+         in the arc'd file LSTEXA.ARC.
+
+          NOTE: I have added the ARCSHELL programs to this disk to
+         make it a little easier to unarc things.  However, to do so,
+         I had  to move four files from the root directory and place
+         them in smtalk.arc.  The files are ST.TTP (the main small
+         talk program), SYNTAX, INSTALLG, and BUGS.  Sorry about all
+         the compressing,  but that seemed better than making this a
+         two-disk system.
+          Below are some of the original "readme" docs:
+
+                                 J.W.
+
+                       * * * * * * * * * * * * * * * * * *
+           The port to the Atari ST was done by Dave Clemans, based on
+         the Amiga port distributed on "Fred Fish" disk #37.
+          The "Little Smalltalk" executable is "st.ttp" in the root
+         directory of this disk.  To run at all, you must have the
+         following directories and files:
+               \prelude\standard
+               \tmp
+               \bin\parse.ttp
+               \lib
+            "Little Smalltalk" needs write access to the disk that it
+         runs on.
+
+          Special notes:
+
+          The port was done using the "Mark Williams" C compiler.
+          The ")!" command executes commands directly and does not use
+         a shell. Everything passed to ")!" must therefore be the full
+         pathname of an executable file, along with any arguments that
+         that program might need.
+
+            The default editor is "\bin\me.ttp".
+
+            Documentation for "Little Smalltalk" is in the folder
+
+
+
+
+
+
+
+
+
+
+
+         \docs.
+
+            Cursor positioning primivites are not supported (yet...).
+         Plotting primitives are not supported.
+
+            To re-build, set desired parameters in \src\env.h
+         (particularly pathnames), and run make.  Once that finishes
+         put st.ttp (Little Smalltalk executable) wherever you wish.
+         Then go to \parse and run make, putting the result
+         "parse.ttp" into the pathname that you specified for it in
+         \src\env.h. Then go to \prelude and run make.  To re-iterate
+         what was said above, this disk was built using the "Mark
+         Williams" C compiler package and might not compile under
+         other packages.  Also, there is not enough free space on the
+         disk to rebuild a prelude or to compile anything; you'll have
+         to move things around to re-compile.
+
+          NOTE: The contents of this disk were constructed from the
+         three CompuServe files listed below:
+
+          LSTBIN.ARC
+
+            Little Smalltalk from the University of Arizona.  To
+         install: on disk with \lib, \tmp directories, put parse.ttp
+         in \bin\parse.ttp, put standard into \prelude\standard, put
+         your editor into \bin\me.ttp. Put st.ttp into \. Run "st.ttp"
+         and your in Little Smalltalk. Exit via ^z. [NOTE: program has
+         already been installed on this disk.]
+
+          LSTDOC.ARC
+          Arc file of documents for Little Smalltalk from the
+         University of Arizona. This is an interpretive, non-graphics
+         Smalltalk like language.
+
+          LSTEXA.ARC
+
+            This is an ARC file containing some short example programs
+         for Little Smalltalk from the University of Arizona.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
